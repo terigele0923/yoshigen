@@ -1,0 +1,16 @@
+# 環境変数ファイル
+.env
+.env.local
+.env.*.php
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vendor
+vendor/
+composer.lock
