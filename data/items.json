@@ -29,6 +29,11 @@
                                           "name":  "アルミスクラップ",
                                           "description":  "アルミサッシ、アルミ材、部材などを回収・選別対象として扱います。",
                                           "image":  "images/photos/items/aluminum/aluminum.jpg"
+                                      },
+                                      {
+                                          "name":  "アルミスクラップ02",
+                                          "description":  "アルミ雑品、アルミ材、部材などを回収・選別対象として扱います。",
+                                          "image":  "images/photos/items/aluminum/aluminum.jpg"
                                       }
                                   ]
                  },
