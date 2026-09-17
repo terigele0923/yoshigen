@@ -71,8 +71,8 @@
     }
 
     function renderDynamic(data) {
-        renderStats(document.querySelector('[data-render="homeStats"]'), data.home && data.home.stats);
-        renderHeroServices(document.querySelector('[data-render="heroServices"]'), data.home && data.home.services);
+        document.querySelectorAll('[data-render="homeStats"]').forEach((target) => renderStats(target, data.home && data.home.stats));
+        document.querySelectorAll('[data-render="heroServices"]').forEach((target) => renderHeroServices(target, data.home && data.home.services));
         renderFeatureCards(document.querySelector('[data-render="homeServices"]'), data.home && data.home.services, data.common && data.common.viewMore);
         renderFlow(document.querySelector('[data-render="homeFlow"]'), data.home && data.home.flow);
         renderRows(document.querySelector('[data-render="companyOutline"]'), data.company && data.company.outline);

@@ -31,27 +31,60 @@
 </header>
 <main>
     <section class="eco-hero">
-        <canvas id="ecoMotionCanvas" class="motion-canvas" aria-hidden="true"></canvas>
-        <div id="lpCarousel" class="hero-carousel" data-interval="2000"><div class="hero-slide active" style="background-image:url('images/background-image.png')"></div>
-<div class="hero-slide" style="background-image:url('images/background-image02.png')"></div>
-<div class="hero-slide" style="background-image:url('images/background-images03.png')"></div></div>
-        <div class="hero-shade" aria-hidden="true"></div>
+        <div id="lpCarousel" class="hero-carousel" data-interval="2000"><div class="hero-track"><div class="hero-slide active" style="background-image:url('images/background-image.png')">
+            <div class="hero-shade" aria-hidden="true"></div>
+            <canvas class="motion-canvas" aria-hidden="true"></canvas>
+            <div class="container hero-layout">
+                <div class="hero-copy">
+                    <p class="section-kicker" data-i18n="home.heroKicker"></p>
+                    <h1 data-i18n="home.heroTitle"></h1>
+                    <p class="hero-lead" data-i18n="home.heroLead"></p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="products.html" data-i18n="home.heroPrimary"></a>
+                        <a class="btn btn-outline" href="company.html" data-i18n="home.heroSecondary"></a>
+                    </div>
+                    <div class="hero-quick" data-render="heroServices"></div>
+                </div>
+                <div class="metric-board glass-panel" data-render="homeStats"></div>
+            </div>
+        </div>
+<div class="hero-slide" style="background-image:url('images/background-image02.png')">
+            <div class="hero-shade" aria-hidden="true"></div>
+            <canvas class="motion-canvas" aria-hidden="true"></canvas>
+            <div class="container hero-layout">
+                <div class="hero-copy">
+                    <p class="section-kicker" data-i18n="home.heroKicker"></p>
+                    <h1 data-i18n="home.heroTitle"></h1>
+                    <p class="hero-lead" data-i18n="home.heroLead"></p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="products.html" data-i18n="home.heroPrimary"></a>
+                        <a class="btn btn-outline" href="company.html" data-i18n="home.heroSecondary"></a>
+                    </div>
+                    <div class="hero-quick" data-render="heroServices"></div>
+                </div>
+                <div class="metric-board glass-panel" data-render="homeStats"></div>
+            </div>
+        </div>
+<div class="hero-slide" style="background-image:url('images/background-images03.png')">
+            <div class="hero-shade" aria-hidden="true"></div>
+            <canvas class="motion-canvas" aria-hidden="true"></canvas>
+            <div class="container hero-layout">
+                <div class="hero-copy">
+                    <p class="section-kicker" data-i18n="home.heroKicker"></p>
+                    <h1 data-i18n="home.heroTitle"></h1>
+                    <p class="hero-lead" data-i18n="home.heroLead"></p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="products.html" data-i18n="home.heroPrimary"></a>
+                        <a class="btn btn-outline" href="company.html" data-i18n="home.heroSecondary"></a>
+                    </div>
+                    <div class="hero-quick" data-render="heroServices"></div>
+                </div>
+                <div class="metric-board glass-panel" data-render="homeStats"></div>
+            </div>
+        </div></div></div>
         <button class="slider-arrow prev" type="button" data-slide="prev" aria-label="Previous slide">‹</button>
         <button class="slider-arrow next" type="button" data-slide="next" aria-label="Next slide">›</button>
         <div class="slider-dots" aria-hidden="true"></div>
-        <div class="container hero-layout">
-            <div class="hero-copy" data-animate>
-                <p class="section-kicker" data-i18n="home.heroKicker"></p>
-                <h1 data-i18n="home.heroTitle"></h1>
-                <p class="hero-lead" data-i18n="home.heroLead"></p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="products.html" data-i18n="home.heroPrimary"></a>
-                    <a class="btn btn-outline" href="company.html" data-i18n="home.heroSecondary"></a>
-                </div>
-                <div class="hero-quick" data-render="heroServices"></div>
-            </div>
-            <div class="metric-board glass-panel" data-render="homeStats" data-animate></div>
-        </div>
     </section>
     <section class="section split-section">
         <div class="container split-grid">

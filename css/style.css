@@ -39,10 +39,11 @@ img { max-width: 100%; display: block; }
 .lang-switch button:hover, .lang-switch button.active { background: var(--green-600); color: #fff; transform: translateY(-1px); box-shadow: 0 12px 24px rgba(22,163,107,.24); }
 .menu-toggle { display: none; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 999px; background: #fff; cursor: pointer; }
 .menu-toggle span { display: block; width: 18px; height: 2px; background: var(--green-900); margin: 4px auto; transition: transform .2s ease, opacity .2s ease; }
-.eco-hero { min-height: clamp(500px, 72vh, 650px); position: relative; overflow: hidden; color: #fff; display: grid; align-items: center; }
-.hero-carousel, .hero-slide, .hero-shade, .motion-canvas { position: absolute; inset: 0; }
-.hero-slide { background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0; transform: scale(1.08); transition: opacity .9s ease, transform 4s ease; }
-.hero-slide.active { opacity: 1; transform: scale(1); }
+.eco-hero { position: relative; overflow: hidden; color: #fff; }
+.hero-carousel { overflow: hidden; }
+.hero-track { display: flex; width: 100%; transition: transform .75s cubic-bezier(.22,.61,.36,1); will-change: transform; }
+.hero-slide { position: relative; flex: 0 0 100%; min-width: 0; min-height: clamp(500px, 72vh, 650px); display: grid; align-items: center; background-size: cover; background-position: center; background-repeat: no-repeat; }
+.hero-shade, .motion-canvas { position: absolute; inset: 0; }
 .hero-shade { background: linear-gradient(90deg, rgba(3,30,22,.96) 0%, rgba(3,45,31,.82) 46%, rgba(3,35,27,.30) 100%); }
 .motion-canvas { z-index: 2; opacity: .5; mix-blend-mode: screen; pointer-events: none; }
 .hero-layout { position: relative; z-index: 4; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 30px; align-items: end; padding: 54px 0 46px; }
@@ -239,7 +240,7 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
     .brand-mark::after { inset: 8px; }
     .brand small { display: none; }
     .eco-hero { min-height: auto; }
-    .hero-slide { background-size: auto 54%; background-position: 78% bottom; opacity: .82; }
+    .hero-slide { min-height: 0; background-size: auto 54%; background-position: 78% bottom; }
     .hero-shade { background: linear-gradient(180deg, rgba(3,30,22,.96) 0%, rgba(3,45,31,.88) 55%, rgba(3,35,27,.66) 100%); }
     .hero-layout { padding: 46px 0 50px; }
     .hero-copy h1 { font-size: clamp(1.22rem, 5.8vw, 1.65rem); line-height: 1.25; }
