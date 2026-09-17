@@ -1,74 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>会社紹介｜吉源商事</title>
-    <meta name="description" content="吉源商事は、日本国内の廃棄金属を買い取り、解体・選別後、東南アジアへ輸出する金属スクラップ商社です。">
-    <script src="js/include.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="株式会社 吉源商事の公式ホームページ。金属スクラップ買取、選別、保管、輸出に関する企業情報を掲載しています。">
+    <title data-title-key="company.metaTitle">企業情報｜株式会社 吉源商事</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<header class="site-header sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">吉源商事</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#globalNav" aria-controls="globalNav" aria-expanded="false" aria-label="メニューを開く">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="globalNav">
-                <ul class="navbar-nav ms-auto gap-lg-2">
-                    <li class="nav-item"><a class="nav-link" href="index.html">トップ</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="company.html">会社紹介</a></li>
-                    <li class="nav-item"><a class="nav-link" href="business.html">事業内容</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">問い合わせ</a></li>
-                </ul>
-            </div>
+<body data-page="company">
+<header class="site-header" data-active-page="company">
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Yoshigen Shoji home">
+            <span class="brand-mark"></span>
+            <span><strong data-i18n="common.companyName">株式会社 吉源商事</strong><small data-i18n="common.tagline"></small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+        <nav class="site-nav" aria-label="Main navigation"><a href="index.html" data-nav="home" data-i18n="common.nav.home">トップ</a>
+<a href="company.html" data-nav="company" data-i18n="common.nav.company">企業情報</a>
+<a href="products.html" data-nav="products" data-i18n="common.nav.products">取扱商品</a>
+<a href="facilities.html" data-nav="facilities" data-i18n="common.nav.facilities">設備・実例</a>
+<a href="gallery.html" data-nav="gallery" data-i18n="common.nav.gallery">ギャラリー</a>
+<a href="contact.html" data-nav="contact" data-i18n="common.nav.contact">お問い合わせ</a></nav>
+        <div class="lang-switch" aria-label="Language switch">
+            <button type="button" data-lang="ja">日本語</button>
+            <button type="button" data-lang="zh">中文</button>
+            <button type="button" data-lang="en">English</button>
         </div>
-    </nav>
+    </div>
 </header>
-
-<main>
-    <section class="page-title">
-        <div class="container">
-            <h1 class="fw-bold">会社紹介</h1>
-            <p class="lead mb-0">吉源商事の会社情報をご紹介します。</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <h2 class="section-title">代表挨拶</h2>
-                </div>
-                <div class="col-lg-8">
-                    <p>吉源商事は、国内で発生する廃棄金属を買い取り、解体・選別を通じて再資源化し、東南アジア市場へ輸出する事業を行っています。</p>
-                    <p class="mb-0">誠実な取引、適正な価格提示、安全な作業を大切にし、お客様に信頼される企業を目指してまいります。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section-muted">
-        <div class="container">
-            <h2 class="section-title mb-4">会社概要</h2>
-            <div class="table-responsive">
-                <table class="table company-table align-middle">
-                    <tbody>
-                        <tr><th scope="row">会社名</th><td>株式会社　吉源商事</td></tr>
-                        <tr><th scope="row">所在地</th><td>〒285-0078 千葉県佐倉市坂戸1371-1</td></tr>
-                        <tr><th scope="row">代表者</th><td>李光林　社長</td></tr>
-                        <tr><th scope="row">事業内容</th><td>金属スクラップ買取、解体、選別、輸出</td></tr>
-                        <tr><th scope="row">電話番号</th><td>090-8736-8666</td></tr>
-                        <tr><th scope="row">メール</th><td>yoshigensyouji@gmail.com</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
+<main><section class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('images/background-image.png')"></div>
+    <canvas class="page-canvas motion-canvas-small" aria-hidden="true"></canvas>
+    <div class="container page-hero-inner" data-animate>
+        <p class="section-kicker" data-i18n="company.pageKicker"></p>
+        <h1 data-i18n="company.pageTitle"></h1>
+        <p data-i18n="company.pageLead"></p>
+    </div>
+</section>
+    <section class="section message-section"><div class="container message-layout">
+        <div class="message-heading" data-animate><p class="section-kicker">MESSAGE</p><h2 class="section-title" data-i18n="company.messageTitle"></h2></div>
+        <article class="message-panel tilt-card" data-animate>
+            <span class="message-quote">“</span>
+            <p class="body-text" data-i18n="company.messageText"></p>
+            <p class="message-signature" data-i18n="company.messageSignature"></p>
+        </article>
+    </div></section>
+    <section class="section section-soft"><div class="container"><div class="section-heading" data-animate><p class="section-kicker">PROFILE</p><h2 class="section-title" data-i18n="company.outlineTitle"></h2></div><div class="info-table" data-render="companyOutline"></div></div></section>
+    <section class="section"><div class="container"><div class="section-heading" data-animate><p class="section-kicker">POLICY</p><h2 class="section-title" data-i18n="company.philosophyTitle"></h2></div><div class="feature-grid" data-render="companyPhilosophy"></div></div></section>
+    <section class="section page-links-section">
+    <div class="container" data-animate>
+        <p class="section-kicker">EXPLORE</p>
+        <h2 class="section-title compact-title" data-i18n="common.relatedTitle"></h2>
+        <div class="page-link-grid"><a class="page-link-card" href="index.html"><span data-i18n="common.nav.home"></span><b>→</b></a>
+<a class="page-link-card" href="products.html"><span data-i18n="common.nav.products"></span><b>→</b></a>
+<a class="page-link-card" href="facilities.html"><span data-i18n="common.nav.facilities"></span><b>→</b></a>
+<a class="page-link-card" href="gallery.html"><span data-i18n="common.nav.gallery"></span><b>→</b></a>
+<a class="page-link-card" href="contact.html"><span data-i18n="common.nav.contact"></span><b>→</b></a></div>
+    </div>
+</section>
 </main>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<section class="site-cta" data-animate>
+    <div class="container cta-inner">
+        <div><p class="section-kicker">CONTACT</p><h2 data-i18n="common.ctaTitle"></h2><p data-i18n="common.ctaText"></p></div>
+        <a class="btn btn-light" href="contact.html" data-i18n="common.ctaButton"></a>
+    </div>
+</section>
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div><p class="footer-brand" data-i18n="common.companyName"></p><p data-i18n="common.footerLead"></p><small data-i18n="common.footerNote"></small></div>
+        <p class="copyright" data-i18n="common.copyright"></p>
+    </div>
+</footer>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
