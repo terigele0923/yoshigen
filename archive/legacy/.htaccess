@@ -1,5 +1,0 @@
-AddDefaultCharset UTF-8
-
-<FilesMatch "\.(html|htm|css|js|json)$">
-    AddDefaultCharset UTF-8
-</FilesMatch>

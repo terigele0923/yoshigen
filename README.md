@@ -22,9 +22,6 @@ HTML、CSS、JavaScript の静的サイトです。GitHub Pages ではリポジ�
 - `js/i18n.js`: 2つの JSON を読み込み、文章・カード・画像・地図を表示します。
 - `js/main.js`: ナビゲーション、スライダー、canvas、アニメーション。
 - `tools/check-content.js`: JSON の項目IDと画像パスの検証。
-- `archive/legacy/`: 旧デザインの参照用ファイル。現行サイトでは使用しません。
-
-`business.html` と旧 `items/`・`services/` のURLは、現行ページへの転送を残しています。
 
 ## データの流れ
 
