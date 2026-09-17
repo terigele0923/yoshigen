@@ -119,7 +119,7 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
 .page-hero-inner { position: relative; z-index: 2; padding: 88px 0 50px; max-width: 880px; margin-left: max(20px, calc((100vw - 1160px) / 2)); }
 .page-hero h1 { margin: 0; font-size: clamp(1.5rem, 2.7vw, 2.55rem); line-height: 1.12; font-weight: 900; }
 .page-hero p:last-child { max-width: 700px; color: rgba(255,255,255,.82); font-size: .98rem; }
-.info-table { display: grid; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; box-shadow: 0 14px 38px rgba(8,48,36,.08); }
+.info-table { display: grid; border: 1px solid var(--line); padding-left:12px; border-radius: var(--radius); overflow: hidden; background: #fff; box-shadow: 0 14px 38px rgba(8,48,36,.08); }
 .info-row { display: grid; grid-template-columns: 210px 1fr; border-bottom: 1px solid var(--line); }
 .info-row:last-child { border-bottom: 0; }
 .info-row dt, .info-row dd { margin: 0; padding: 18px 22px; font-size: .94rem; }
