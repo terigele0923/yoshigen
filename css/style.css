@@ -41,7 +41,7 @@ img { max-width: 100%; display: block; }
 .menu-toggle span { display: block; width: 18px; height: 2px; background: var(--green-900); margin: 4px auto; transition: transform .2s ease, opacity .2s ease; }
 .eco-hero { position: relative; overflow: hidden; color: #fff; }
 .hero-carousel { overflow: hidden; }
-.hero-track { display: flex; width: 100%; transition: transform .75s cubic-bezier(.22,.61,.36,1); will-change: transform; }
+.hero-track { display: flex; width: 100%; transition: transform 2s cubic-bezier(.45,0,.2,1); will-change: transform; }
 .hero-slide { position: relative; flex: 0 0 100%; min-width: 0; min-height: clamp(500px, 72vh, 650px); display: grid; align-items: center; background-size: cover; background-position: center; background-repeat: no-repeat; }
 .hero-shade, .motion-canvas { position: absolute; inset: 0; }
 .hero-shade { background: linear-gradient(90deg, rgba(3,30,22,.96) 0%, rgba(3,45,31,.82) 46%, rgba(3,35,27,.30) 100%); }
