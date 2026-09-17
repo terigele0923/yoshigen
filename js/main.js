@@ -30,31 +30,17 @@ function initHeroSlider() {
     const carousel = document.getElementById('lpCarousel');
     if (!carousel || carousel.dataset.ready) return;
     carousel.dataset.ready = 'true';
-    const track = carousel.querySelector('.hero-track');
-    const slides = Array.from(track.querySelectorAll('.hero-slide'));
+    const slides = Array.from(carousel.querySelectorAll('.hero-slide'));
     const dots = document.querySelector('.slider-dots');
-    const interval = Number(carousel.dataset.interval || 2000);
+    const interval = Number(carousel.dataset.interval || 5000);
     let current = 0;
-    let position = 1;
     let timer = null;
     if (slides.length < 2) return;
-
-    const firstCopy = slides[0].cloneNode(true);
-    const lastCopy = slides[slides.length - 1].cloneNode(true);
-    firstCopy.setAttribute('aria-hidden', 'true');
-    lastCopy.setAttribute('aria-hidden', 'true');
-    firstCopy.inert = true;
-    lastCopy.inert = true;
-    track.prepend(lastCopy);
-    track.append(firstCopy);
-    track.style.transition = 'none';
-    track.style.transform = 'translateX(-100%)';
-    requestAnimationFrame(() => { track.style.transition = ''; });
+    const hero = carousel.closest('.eco-hero');
+    let paused = window.matchMedia('(hover: hover) and (pointer: fine)').matches && hero.matches(':hover');
 
     function show(index) {
         current = (index + slides.length) % slides.length;
-        position = index < 0 ? 0 : index >= slides.length ? slides.length + 1 : index + 1;
-        track.style.transform = `translateX(-${position * 100}%)`;
         slides.forEach((slide, slideIndex) => {
             const active = slideIndex === current;
             slide.classList.toggle('active', active);
@@ -62,18 +48,24 @@ function initHeroSlider() {
         });
         if (dots) dots.querySelectorAll('button').forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === current));
     }
-    track.addEventListener('transitionend', (event) => {
-        if (event.target !== track || event.propertyName !== 'transform') return;
-        if (position !== 0 && position !== slides.length + 1) return;
-        position = current + 1;
-        track.style.transition = 'none';
-        track.style.transform = `translateX(-${position * 100}%)`;
-        requestAnimationFrame(() => requestAnimationFrame(() => { track.style.transition = ''; }));
-    });
     function start() {
         if (timer) window.clearInterval(timer);
-        timer = window.setInterval(() => show(current + 1), interval);
+        if (paused) return;
+        timer = window.setInterval(() => {
+            if (document.hidden) return;
+            show(current + 1);
+        }, interval);
     }
+    hero.addEventListener('pointerenter', (event) => {
+        if (event.pointerType !== 'mouse') return;
+        paused = true;
+        if (timer) window.clearInterval(timer);
+    });
+    hero.addEventListener('pointerleave', (event) => {
+        if (event.pointerType !== 'mouse') return;
+        paused = false;
+        start();
+    });
 
     if (dots) {
         slides.forEach((_, index) => {
