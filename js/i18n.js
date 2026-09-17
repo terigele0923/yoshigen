@@ -3,6 +3,7 @@
     const LANGS = ['ja', 'zh', 'en'];
     const labels = { ja: '日本語', zh: '中文', en: 'English' };
     let dictionary = null;
+    let siteConfig = null;
 
     const escapeHTML = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({
         '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
@@ -43,44 +44,45 @@
         target.innerHTML = items.map((item) => `<article class="flow-card" data-animate><span class="flow-step">${escapeHTML(item.step)}</span><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></article>`).join('');
     }
 
-    function renderProducts(target, items) {
+    function renderProducts(target, items, images) {
         if (!target || !Array.isArray(items)) return;
-        target.innerHTML = items.map((item) => `<article class="product-card tilt-card" data-animate><div class="product-visual" style="background-image:url('${escapeHTML(item.image)}')"></div><div class="product-card-content"><span class="category-pill">${escapeHTML(item.category)}</span><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></article>`).join('');
+        target.innerHTML = items.map((item) => `<article class="product-card tilt-card" data-animate><div class="product-visual" style="background-image:url('${escapeHTML(images[item.id] || '')}')"></div><div class="product-card-content"><span class="category-pill">${escapeHTML(item.category)}</span><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></article>`).join('');
     }
 
-    function renderCases(target, items) {
+    function renderCases(target, items, images) {
         if (!target || !Array.isArray(items)) return;
         target.innerHTML = items.map((item, index) => {
-            const image = String(item.image || 'images/background-image.png').replace(/^images\//, '../images/');
+            const image = images[item.id] || '';
             return `<a class="case-card tilt-card" data-animate href="#facility-detail-${index + 1}" style="--case-bg:url('${escapeHTML(image)}')"><div class="case-stat">${escapeHTML(item.stat)}</div><div><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></a>`;
         }).join('');
     }
 
-    function renderFacilityDetails(target, items) {
+    function renderFacilityDetails(target, items, images) {
         if (!target || !Array.isArray(items)) return;
         target.innerHTML = items.map((item, index) => {
             const points = Array.isArray(item.detailItems) ? item.detailItems : [];
             const pointList = points.map((point) => `<li>${escapeHTML(point)}</li>`).join('');
-            return `<article class="facility-detail" id="facility-detail-${index + 1}" data-animate><div class="facility-detail-visual" style="background-image:url('${escapeHTML(item.image || 'images/background-image.png')}')"></div><div class="facility-detail-body"><p class="section-kicker">${escapeHTML(item.stat || String(index + 1).padStart(2, '0'))}</p><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.detailLead || item.text)}</p>${pointList ? `<ul class="detail-list">${pointList}</ul>` : ''}</div></article>`;
+            return `<article class="facility-detail" id="facility-detail-${index + 1}" data-animate><div class="facility-detail-visual" style="background-image:url('${escapeHTML(images[item.id] || '')}')"></div><div class="facility-detail-body"><p class="section-kicker">${escapeHTML(item.stat || String(index + 1).padStart(2, '0'))}</p><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.detailLead || item.text)}</p>${pointList ? `<ul class="detail-list">${pointList}</ul>` : ''}</div></article>`;
         }).join('');
     }
 
-    function renderGallery(target, items) {
+    function renderGallery(target, items, images) {
         if (!target || !Array.isArray(items)) return;
-        target.innerHTML = items.map((item) => `<article class="gallery-card tilt-card" data-animate><div class="gallery-visual" style="background-image:url('${escapeHTML(item.image)}')"></div><div class="gallery-card-content"><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></article>`).join('');
+        target.innerHTML = items.map((item) => `<article class="gallery-card tilt-card" data-animate><div class="gallery-visual" style="background-image:url('${escapeHTML(images[item.id] || '')}')"></div><div class="gallery-card-content"><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></article>`).join('');
     }
 
-    function renderDynamic(data) {
+    function renderDynamic(data, site) {
+        const media = site.media;
         document.querySelectorAll('[data-render="homeStats"]').forEach((target) => renderStats(target, data.home && data.home.stats));
         document.querySelectorAll('[data-render="heroServices"]').forEach((target) => renderHeroServices(target, data.home && data.home.services));
         renderFeatureCards(document.querySelector('[data-render="homeServices"]'), data.home && data.home.services, data.common && data.common.viewMore);
         renderFlow(document.querySelector('[data-render="homeFlow"]'), data.home && data.home.flow);
         renderRows(document.querySelector('[data-render="companyOutline"]'), data.company && data.company.outline);
         renderFeatureCards(document.querySelector('[data-render="companyPhilosophy"]'), data.company && data.company.philosophy, data.common && data.common.viewMore);
-        renderProducts(document.querySelector('[data-render="products"]'), data.products && data.products.items);
-        renderCases(document.querySelector('[data-render="facilities"]'), data.facilities && data.facilities.cases);
-        renderFacilityDetails(document.querySelector('[data-render="facilityDetails"]'), data.facilities && data.facilities.cases);
-        renderGallery(document.querySelector('[data-render="gallery"]'), data.gallery && data.gallery.sections);
+        renderProducts(document.querySelector('[data-render="products"]'), data.products && data.products.items, media.products);
+        renderCases(document.querySelector('[data-render="facilities"]'), data.facilities && data.facilities.cases, media.facilities);
+        renderFacilityDetails(document.querySelector('[data-render="facilityDetails"]'), data.facilities && data.facilities.cases, media.facilities);
+        renderGallery(document.querySelector('[data-render="gallery"]'), data.gallery && data.gallery.sections, media.gallery);
         renderRows(document.querySelector('[data-render="contactRows"]'), data.contact && data.contact.contactRows);
         renderRows(document.querySelector('[data-render="bankRows"]'), data.contact && data.contact.bankRows);
     }
@@ -88,12 +90,46 @@
     async function loadDictionary() {
         if (dictionary) return dictionary;
         const response = await fetch('data/i18n.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error(`i18n.json: ${response.status}`);
         dictionary = await response.json();
         return dictionary;
     }
 
+    async function loadSiteConfig() {
+        if (siteConfig) return siteConfig;
+        const response = await fetch('data/site.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error(`site.json: ${response.status}`);
+        siteConfig = await response.json();
+        return siteConfig;
+    }
+
+    function renderSite(config) {
+        const carousel = document.getElementById('lpCarousel');
+        const track = carousel && carousel.querySelector('.hero-track');
+        if (track && Array.isArray(config.hero.slides) && config.hero.slides.length) {
+            const template = track.querySelector('.hero-slide');
+            const slides = config.hero.slides.map((image, index) => {
+                const slide = template.cloneNode(true);
+                slide.classList.toggle('active', index === 0);
+                slide.style.backgroundImage = `url(${JSON.stringify(image)})`;
+                return slide;
+            });
+            track.replaceChildren(...slides);
+            carousel.dataset.interval = String(config.hero.intervalMs);
+        }
+        document.querySelectorAll('.page-hero-bg').forEach((hero) => {
+            hero.style.backgroundImage = `url(${JSON.stringify(config.pageHeroImage)})`;
+        });
+        const map = document.querySelector('.map-frame iframe');
+        if (map) map.src = `https://www.google.com/maps?q=${encodeURIComponent(config.contact.mapQuery)}&output=embed`;
+    }
+
     async function applyLanguage(lang) {
-        const all = await loadDictionary();
+        const [all, site] = await Promise.all([loadDictionary(), loadSiteConfig()]);
+        if (!document.body.dataset.siteReady) {
+            renderSite(site);
+            document.body.dataset.siteReady = 'true';
+        }
         const data = all[lang] || all.ja;
         document.documentElement.lang = lang;
         window.localStorage.setItem('yoshigen-lang', lang);
@@ -110,7 +146,7 @@
             button.textContent = labels[button.dataset.lang] || button.dataset.lang;
             button.classList.toggle('active', button.dataset.lang === lang);
         });
-        renderDynamic(data);
+        renderDynamic(data, site);
         window.dispatchEvent(new CustomEvent('yoshigen:i18n-ready'));
     }
 

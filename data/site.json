@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "intervalMs": 5000,
+    "slides": [
+      "images/background-image.png",
+      "images/background-image02.png",
+      "images/background-images03.png"
+    ]
+  },
+  "pageHeroImage": "images/background-image.png",
+  "media": {
+    "products": {
+      "steel": "images/background-image.png",
+      "copper": "images/background-image02.png",
+      "aluminum": "images/background-images03.png",
+      "stainless": "images/background-image.png",
+      "brass": "images/background-image02.png",
+      "wire": "images/background-images03.png",
+      "motor": "images/background-image.png",
+      "machinery": "images/background-image02.png",
+      "demolition-metal": "images/background-images03.png"
+    },
+    "facilities": {
+      "yard": "images/background-image.png",
+      "sorting": "images/background-image02.png",
+      "shipment": "images/background-images03.png"
+    },
+    "gallery": {
+      "company": "images/background-image.png",
+      "yard": "images/background-image02.png",
+      "port": "images/background-images03.png",
+      "products": "images/background-image.png"
+    }
+  },
+  "contact": {
+    "mapQuery": "千葉県佐倉市坂戸1371-1"
+  }
+}

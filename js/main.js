@@ -1,14 +1,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
-    initHeroSlider();
-    initCanvasMotion();
-    initDynamicMotion();
     updateProgress();
     window.addEventListener('scroll', updateProgress, { passive: true });
 });
 
-window.addEventListener('yoshigen:i18n-ready', initDynamicMotion);
+window.addEventListener('yoshigen:i18n-ready', () => {
+    initHeroSlider();
+    initCanvasMotion();
+    initDynamicMotion();
+});
 
 function initNavigation() {
     const header = document.querySelector('.site-header');

@@ -147,55 +147,55 @@
           "title": "鉄スクラップ",
           "category": "Ferrous",
           "text": "建築、工場、解体現場などから発生する鉄系スクラップを取り扱います。",
-          "image": "images/background-image.png"
+          "id": "steel"
         },
         {
           "title": "銅",
           "category": "Copper",
           "text": "銅線、銅材、銅屑など、再資源化価値の高い非鉄金属を扱います。",
-          "image": "images/background-image02.png"
+          "id": "copper"
         },
         {
           "title": "アルミ",
           "category": "Aluminum",
           "text": "アルミサッシ、アルミ材、機械部品などを状態に応じて確認します。",
-          "image": "images/background-images03.png"
+          "id": "aluminum"
         },
         {
           "title": "ステンレス",
           "category": "Stainless",
           "text": "耐食性を持つステンレス材を種類ごとに整理し、出荷します。",
-          "image": "images/background-image.png"
+          "id": "stainless"
         },
         {
           "title": "真鍮",
           "category": "Brass",
           "text": "真鍮部品、バルブ、金具類などを取り扱います。",
-          "image": "images/background-image02.png"
+          "id": "brass"
         },
         {
           "title": "雑線",
           "category": "Wire",
           "text": "各種電線、ケーブル類を素材・状態に合わせて確認します。",
-          "image": "images/background-images03.png"
+          "id": "wire"
         },
         {
           "title": "モーター",
           "category": "Motor",
           "text": "工場設備や機械から発生するモーター類を取り扱います。",
-          "image": "images/background-image.png"
+          "id": "motor"
         },
         {
           "title": "工業機械",
           "category": "Machinery",
           "text": "使用済み機械、設備部材などを個別条件に応じて相談できます。",
-          "image": "images/background-image02.png"
+          "id": "machinery"
         },
         {
           "title": "解体金属",
           "category": "Demolition",
           "text": "解体現場から発生する金属資源の確認、整理、出荷に対応します。",
-          "image": "images/background-images03.png"
+          "id": "demolition-metal"
         }
       ]
     },
@@ -209,37 +209,37 @@
           "title": "設備・ヤード",
           "text": "保管場所や作業環境の概要を、写真と合わせて掲載します。",
           "stat": "YARD",
-          "image": "images/background-image.png",
           "detailLead": "設備・ヤードに関する仮の詳細説明です。正式公開時には、敷地、保管場所、作業導線、設備写真などを掲載します。",
           "detailItems": [
             "保管場所の概要",
             "作業環境の紹介",
             "安全管理に関する説明"
-          ]
+          ],
+          "id": "yard"
         },
         {
           "title": "選別・管理",
           "text": "品目ごとの整理や管理に関する情報を掲載します。",
           "stat": "SORT",
-          "image": "images/background-image02.png",
           "detailLead": "選別・管理に関する仮の詳細説明です。正式公開時には、品目ごとの整理方法や管理体制の写真を掲載します。",
           "detailItems": [
             "品目別の整理",
             "保管状態の確認",
             "管理体制の紹介"
-          ]
+          ],
+          "id": "sorting"
         },
         {
           "title": "出荷・連携",
           "text": "出荷や関連作業の流れを、分かりやすく紹介します。",
           "stat": "SHIP",
-          "image": "images/background-images03.png",
           "detailLead": "出荷・連携に関する仮の詳細説明です。正式公開時には、出荷準備、輸送、関係先との連携内容を掲載します。",
           "detailItems": [
             "出荷準備の流れ",
             "輸送に関する概要",
             "関係先との連携"
-          ]
+          ],
+          "id": "shipment"
         }
       ],
       "detailTitle": "詳細情報"
@@ -253,22 +253,22 @@
         {
           "title": "会社外観",
           "text": "企業の雰囲気が伝わる写真を掲載予定です。",
-          "image": "images/background-image.png"
+          "id": "company"
         },
         {
           "title": "ヤード",
           "text": "保管、選別、作業導線の様子を掲載予定です。",
-          "image": "images/background-image02.png"
+          "id": "yard"
         },
         {
           "title": "港・出荷",
           "text": "出荷や輸送に関する写真を掲載予定です。",
-          "image": "images/background-images03.png"
+          "id": "port"
         },
         {
           "title": "取扱品目",
           "text": "主要な金属スクラップの写真を掲載予定です。",
-          "image": "images/background-image.png"
+          "id": "products"
         }
       ]
     },
@@ -473,55 +473,55 @@
           "title": "铁废料",
           "category": "Ferrous",
           "text": "经营建筑、工厂、拆解现场等产生的铁类废料。",
-          "image": "images/background-image.png"
+          "id": "steel"
         },
         {
           "title": "铜",
           "category": "Copper",
           "text": "经营铜线、铜材、铜屑等再资源化价值较高的有色金属。",
-          "image": "images/background-image02.png"
+          "id": "copper"
         },
         {
           "title": "铝",
           "category": "Aluminum",
           "text": "根据状态确认铝窗框、铝材、机械部件等。",
-          "image": "images/background-images03.png"
+          "id": "aluminum"
         },
         {
           "title": "不锈钢",
           "category": "Stainless",
           "text": "按种类整理耐腐蚀的不锈钢材料并出货。",
-          "image": "images/background-image.png"
+          "id": "stainless"
         },
         {
           "title": "黄铜",
           "category": "Brass",
           "text": "经营黄铜部件、阀门、金属配件等。",
-          "image": "images/background-image02.png"
+          "id": "brass"
         },
         {
           "title": "电线",
           "category": "Wire",
           "text": "确认各种电线、电缆的材料和状态。",
-          "image": "images/background-images03.png"
+          "id": "wire"
         },
         {
           "title": "马达",
           "category": "Motor",
           "text": "经营工厂设备和机械中产生的马达类。",
-          "image": "images/background-image.png"
+          "id": "motor"
         },
         {
           "title": "工业机械",
           "category": "Machinery",
           "text": "旧机械、设备部材等可按个别条件咨询。",
-          "image": "images/background-image02.png"
+          "id": "machinery"
         },
         {
           "title": "拆解金属",
           "category": "Demolition",
           "text": "对应拆解现场产生的金属资源确认、整理和出货。",
-          "image": "images/background-images03.png"
+          "id": "demolition-metal"
         }
       ]
     },
@@ -535,37 +535,37 @@
           "title": "设备与场地",
           "text": "结合照片介绍保管场地和作业环境概要。",
           "stat": "YARD",
-          "image": "images/background-image.png",
           "detailLead": "这是设备与场地的临时详细说明。正式公开时将刊登场地、保管区域、作业动线和设备照片。",
           "detailItems": [
             "保管区域概要",
             "作业环境介绍",
             "安全管理说明"
-          ]
+          ],
+          "id": "yard"
         },
         {
           "title": "分选与管理",
           "text": "刊登按品类整理和管理相关的信息。",
           "stat": "SORT",
-          "image": "images/background-image02.png",
           "detailLead": "这是分选与管理的临时详细说明。正式公开时将刊登按品类整理的方法和管理体制照片。",
           "detailItems": [
             "按品类整理",
             "保管状态确认",
             "管理体制介绍"
-          ]
+          ],
+          "id": "sorting"
         },
         {
           "title": "出货与联动",
           "text": "以清晰方式介绍出货和相关作业流程。",
           "stat": "SHIP",
-          "image": "images/background-images03.png",
           "detailLead": "这是出货与联动的临时详细说明。正式公开时将刊登出货准备、运输和相关合作内容。",
           "detailItems": [
             "出货准备流程",
             "运输概要",
             "相关方联动"
-          ]
+          ],
+          "id": "shipment"
         }
       ],
       "detailTitle": "详细信息"
@@ -579,22 +579,22 @@
         {
           "title": "公司外观",
           "text": "预定刊登体现企业氛围的照片。",
-          "image": "images/background-image.png"
+          "id": "company"
         },
         {
           "title": "场地",
           "text": "预定刊登保管、分选和作业动线照片。",
-          "image": "images/background-image02.png"
+          "id": "yard"
         },
         {
           "title": "港口与出货",
           "text": "预定刊登出货和运输相关照片。",
-          "image": "images/background-images03.png"
+          "id": "port"
         },
         {
           "title": "经营品类",
           "text": "预定刊登主要金属废料照片。",
-          "image": "images/background-image.png"
+          "id": "products"
         }
       ]
     },
@@ -799,55 +799,55 @@
           "title": "Steel Scrap",
           "category": "Ferrous",
           "text": "Steel scrap generated from construction, factories, and demolition sites.",
-          "image": "images/background-image.png"
+          "id": "steel"
         },
         {
           "title": "Copper",
           "category": "Copper",
           "text": "Copper wire, copper material, and copper scrap with high recycling value.",
-          "image": "images/background-image02.png"
+          "id": "copper"
         },
         {
           "title": "Aluminum",
           "category": "Aluminum",
           "text": "Aluminum sash, materials, and machinery parts reviewed by condition.",
-          "image": "images/background-images03.png"
+          "id": "aluminum"
         },
         {
           "title": "Stainless Steel",
           "category": "Stainless",
           "text": "Stainless materials sorted by type for shipment.",
-          "image": "images/background-image.png"
+          "id": "stainless"
         },
         {
           "title": "Brass",
           "category": "Brass",
           "text": "Brass parts, valves, fittings, and related materials.",
-          "image": "images/background-image02.png"
+          "id": "brass"
         },
         {
           "title": "Wire",
           "category": "Wire",
           "text": "Various wires and cables reviewed by material and condition.",
-          "image": "images/background-images03.png"
+          "id": "wire"
         },
         {
           "title": "Motors",
           "category": "Motor",
           "text": "Motors generated from factory equipment and machinery.",
-          "image": "images/background-image.png"
+          "id": "motor"
         },
         {
           "title": "Industrial Machinery",
           "category": "Machinery",
           "text": "Used machinery and equipment materials reviewed by individual conditions.",
-          "image": "images/background-image02.png"
+          "id": "machinery"
         },
         {
           "title": "Demolition Metals",
           "category": "Demolition",
           "text": "Metal resources generated from demolition sites, organized and shipped as required.",
-          "image": "images/background-images03.png"
+          "id": "demolition-metal"
         }
       ]
     },
@@ -861,37 +861,37 @@
           "title": "Facilities and Yard",
           "text": "Storage areas and work environments are introduced with photos.",
           "stat": "YARD",
-          "image": "images/background-image.png",
           "detailLead": "This is placeholder detail copy for facilities and yards. Official content can include site layout, storage areas, workflow, and facility photos.",
           "detailItems": [
             "Storage area overview",
             "Work environment introduction",
             "Safety management notes"
-          ]
+          ],
+          "id": "yard"
         },
         {
           "title": "Sorting and Management",
           "text": "Information about category-based sorting and management is listed.",
           "stat": "SORT",
-          "image": "images/background-image02.png",
           "detailLead": "This is placeholder detail copy for sorting and management. Official content can include sorting methods, category handling, and management photos.",
           "detailItems": [
             "Category-based sorting",
             "Storage condition review",
             "Management system overview"
-          ]
+          ],
+          "id": "sorting"
         },
         {
           "title": "Shipment and Coordination",
           "text": "Shipment and related work flows are introduced clearly.",
           "stat": "SHIP",
-          "image": "images/background-images03.png",
           "detailLead": "This is placeholder detail copy for shipment and coordination. Official content can include shipment preparation, transport, and partner coordination.",
           "detailItems": [
             "Shipment preparation flow",
             "Transport overview",
             "Partner coordination"
-          ]
+          ],
+          "id": "shipment"
         }
       ],
       "detailTitle": "Details"
@@ -905,22 +905,22 @@
         {
           "title": "Company Exterior",
           "text": "Photos conveying the company atmosphere will be added.",
-          "image": "images/background-image.png"
+          "id": "company"
         },
         {
           "title": "Yard",
           "text": "Storage, sorting, and workflow photos will be added.",
-          "image": "images/background-image02.png"
+          "id": "yard"
         },
         {
           "title": "Port and Shipment",
           "text": "Shipment and transportation photos will be added.",
-          "image": "images/background-images03.png"
+          "id": "port"
         },
         {
           "title": "Product Categories",
           "text": "Photos of major metal scrap categories will be added.",
-          "image": "images/background-image.png"
+          "id": "products"
         }
       ]
     },
