@@ -7,8 +7,7 @@ const site = readJson('data/site.json');
 const translations = readJson('data/i18n.json');
 const groups = {
     products: (lang) => translations[lang].products.items,
-    facilities: (lang) => translations[lang].facilities.cases,
-    gallery: (lang) => translations[lang].gallery.sections
+    facilities: (lang) => translations[lang].facilities.cases
 };
 
 function checkImage(image, label) {

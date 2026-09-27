@@ -8,7 +8,6 @@
         "company": "企業情報",
         "products": "取扱商品",
         "facilities": "設備・実例",
-        "gallery": "ギャラリー",
         "contact": "お問い合わせ"
       },
       "language": "表示言語",
@@ -25,14 +24,15 @@
       "metaTitle": "株式会社 吉源商事｜金属リサイクル・資源循環",
       "heroKicker": "GREEN RESOURCE CIRCULATION",
       "heroTitle": "資源を活かし、次へつなぐ。",
-      "heroLead": "金属資源の買取、選別、保管、出荷に関する情報を、取引先や関係者の皆さまへ分かりやすくお伝えするためのホームページです。",
+      "heroLead": "金属スクラップの買取・選別から保管・出荷まで、金属資源の再利用を支えています。",
       "heroPrimary": "取扱商品を見る",
       "heroSecondary": "会社情報を見る",
-      "aboutTitle": "資源循環を支える企業情報サイト",
-      "aboutText": "会社概要、取扱品目、設備情報、写真、連絡先など、外部の方が確認しやすい内容を整理しています。正式な文章や写真は、公開準備に合わせて順次差し替えていきます。",
       "servicesTitle": "主なサービス",
-      "flowTitle": "取引の流れ",
       "productsTitle": "取扱商品の一例",
+            "news": [
+              { "date": "2026.09.27", "text": "株式会社 吉源商事の公式ホームページを公開しました。" },
+              { "date": "2026.09.27", "text": "金属スクラップの買取・お取引に関するご相談を受け付けています。" }
+            ],
       "stats": [
         {
           "number": "6",
@@ -52,41 +52,19 @@
       ],
       "services": [
         {
-          "title": "事業内容の紹介",
-          "text": "金属資源に関する主な業務を、分かりやすく整理して掲載します。",
+          "title": "買取・選別",
+          "text": "金属スクラップの品目や状態を確認し、内容に応じて選別します。",
           "link": "facilities.html"
         },
         {
-          "title": "取扱品目の案内",
-          "text": "鉄・非鉄金属など、取り扱う品目を一覧で確認できるようにします。",
+          "title": "保管・出荷",
+          "text": "資源を適切に保管し、国内外への出荷につなげます。",
+          "link": "facilities.html"
+        },
+        {
+          "title": "金属資源の取扱い",
+          "text": "鉄・銅・アルミなど、さまざまな金属スクラップを取り扱います。",
           "link": "products.html"
-        },
-        {
-          "title": "会社情報の公開",
-          "text": "会社概要、所在地、連絡先など、外部向けの基本情報を掲載します。",
-          "link": "company.html"
-        }
-      ],
-      "flow": [
-        {
-          "step": "01",
-          "title": "情報確認",
-          "text": "会社情報や事業内容を確認します。"
-        },
-        {
-          "step": "02",
-          "title": "品目確認",
-          "text": "取扱品目や関連情報を確認します。"
-        },
-        {
-          "step": "03",
-          "title": "設備確認",
-          "text": "設備・実例・写真などを確認します。"
-        },
-        {
-          "step": "04",
-          "title": "連絡確認",
-          "text": "必要に応じて公開連絡先を確認します。"
         }
       ]
     },
@@ -244,34 +222,6 @@
       ],
       "detailTitle": "詳細情報"
     },
-    "gallery": {
-      "metaTitle": "ギャラリー｜株式会社 吉源商事",
-      "pageKicker": "GALLERY",
-      "pageTitle": "写真ギャラリー",
-      "pageLead": "会社、設備、ヤード、取扱品目などの写真を掲載するページです。",
-      "sections": [
-        {
-          "title": "会社外観",
-          "text": "企業の雰囲気が伝わる写真を掲載予定です。",
-          "id": "company"
-        },
-        {
-          "title": "ヤード",
-          "text": "保管、選別、作業導線の様子を掲載予定です。",
-          "id": "yard"
-        },
-        {
-          "title": "港・出荷",
-          "text": "出荷や輸送に関する写真を掲載予定です。",
-          "id": "port"
-        },
-        {
-          "title": "取扱品目",
-          "text": "主要な金属スクラップの写真を掲載予定です。",
-          "id": "products"
-        }
-      ]
-    },
     "contact": {
       "metaTitle": "お問い合わせ｜株式会社 吉源商事",
       "pageKicker": "CONTACT",
@@ -334,7 +284,6 @@
         "company": "企业信息",
         "products": "经营品类",
         "facilities": "设备与案例",
-        "gallery": "图片展示",
         "contact": "联系方式"
       },
       "language": "显示语言",
@@ -351,14 +300,15 @@
       "metaTitle": "株式会社 吉源商事｜金属回收与资源循环",
       "heroKicker": "GREEN RESOURCE CIRCULATION",
       "heroTitle": "让资源延续到下一步。",
-      "heroLead": "本网站用于向客户和相关人员介绍金属资源收购、分选、保管、出货等基本信息。",
+      "heroLead": "我们开展金属废料收购、分选、保管与发货业务，支持金属资源循环利用。",
       "heroPrimary": "查看经营品类",
       "heroSecondary": "查看公司信息",
-      "aboutTitle": "支持资源循环的企业信息网站",
-      "aboutText": "网站整理公司概要、经营品类、设备信息、照片和联系方式，便于外部人员查看。正式文案和照片将随着公开准备陆续替换。",
       "servicesTitle": "主要服务",
-      "flowTitle": "交易流程",
       "productsTitle": "经营品类示例",
+            "news": [
+              { "date": "2026.09.27", "text": "株式会社吉源商事官方网站现已上线。" },
+              { "date": "2026.09.27", "text": "现接受金属废料回收及业务合作相关咨询。" }
+            ],
       "stats": [
         {
           "number": "6",
@@ -378,41 +328,19 @@
       ],
       "services": [
         {
-          "title": "业务介绍",
-          "text": "清晰整理金属资源相关的主要业务内容。",
+          "title": "收购与分选",
+          "text": "确认金属废料的品类与状态，并根据具体情况进行分选。",
           "link": "facilities.html"
         },
         {
-          "title": "经营品类",
-          "text": "以列表形式展示铁类、有色金属等经营品类。",
+          "title": "保管与发货",
+          "text": "妥善保管资源，并安排发往国内外。",
+          "link": "facilities.html"
+        },
+        {
+          "title": "金属资源品类",
+          "text": "经营铁、铜、铝等多种金属废料。",
           "link": "products.html"
-        },
-        {
-          "title": "公司信息",
-          "text": "刊登公司概要、地址、联系方式等对外基本信息。",
-          "link": "company.html"
-        }
-      ],
-      "flow": [
-        {
-          "step": "01",
-          "title": "确认信息",
-          "text": "确认公司信息和业务内容。"
-        },
-        {
-          "step": "02",
-          "title": "确认品类",
-          "text": "确认经营品类和相关信息。"
-        },
-        {
-          "step": "03",
-          "title": "确认设备",
-          "text": "查看设备、案例和照片。"
-        },
-        {
-          "step": "04",
-          "title": "确认联系",
-          "text": "根据需要查看公开联系方式。"
         }
       ]
     },
@@ -570,34 +498,6 @@
       ],
       "detailTitle": "详细信息"
     },
-    "gallery": {
-      "metaTitle": "图片展示｜株式会社 吉源商事",
-      "pageKicker": "GALLERY",
-      "pageTitle": "图片展示",
-      "pageLead": "此页面用于刊登公司、设备、场地和经营品类等照片。",
-      "sections": [
-        {
-          "title": "公司外观",
-          "text": "预定刊登体现企业氛围的照片。",
-          "id": "company"
-        },
-        {
-          "title": "场地",
-          "text": "预定刊登保管、分选和作业动线照片。",
-          "id": "yard"
-        },
-        {
-          "title": "港口与出货",
-          "text": "预定刊登出货和运输相关照片。",
-          "id": "port"
-        },
-        {
-          "title": "经营品类",
-          "text": "预定刊登主要金属废料照片。",
-          "id": "products"
-        }
-      ]
-    },
     "contact": {
       "metaTitle": "联系方式｜株式会社 吉源商事",
       "pageKicker": "CONTACT",
@@ -660,7 +560,6 @@
         "company": "Company",
         "products": "Products",
         "facilities": "Facilities",
-        "gallery": "Gallery",
         "contact": "Contact"
       },
       "language": "Language",
@@ -677,14 +576,15 @@
       "metaTitle": "Yoshigen Shoji Co., Ltd. | Metal Recycling and Resource Circulation",
       "heroKicker": "GREEN RESOURCE CIRCULATION",
       "heroTitle": "Carrying Resources Forward.",
-      "heroLead": "This website introduces basic information about metal resource purchasing, sorting, storage, and shipment for customers and related parties.",
+      "heroLead": "We purchase, sort, store, and ship metal scrap to support the reuse of metal resources.",
       "heroPrimary": "View Products",
       "heroSecondary": "Company Profile",
-      "aboutTitle": "A Company Information Site for Resource Circulation",
-      "aboutText": "Company profile, product categories, facility information, photos, and contact details are organized for external visitors. Official copy and photos will be replaced as launch preparation progresses.",
       "servicesTitle": "Core Services",
-      "flowTitle": "Transaction Flow",
       "productsTitle": "Product Categories",
+            "news": [
+              { "date": "2026.09.27", "text": "The official Yoshigen Shoji website is now live." },
+              { "date": "2026.09.27", "text": "We welcome inquiries about scrap metal purchasing and business transactions." }
+            ],
       "stats": [
         {
           "number": "6",
@@ -704,41 +604,19 @@
       ],
       "services": [
         {
-          "title": "Business Overview",
-          "text": "Key business activities related to metal resources are organized clearly.",
+          "title": "Purchasing and Sorting",
+          "text": "We assess metal scrap by type and condition, then sort it accordingly.",
           "link": "facilities.html"
         },
         {
-          "title": "Product Categories",
-          "text": "Ferrous and non-ferrous categories are presented in an easy-to-check list.",
+          "title": "Storage and Shipment",
+          "text": "We store resources appropriately and arrange shipments in Japan and overseas.",
+          "link": "facilities.html"
+        },
+        {
+          "title": "Metal Scrap Categories",
+          "text": "We handle a range of metal scrap, including steel, copper, and aluminum.",
           "link": "products.html"
-        },
-        {
-          "title": "Company Information",
-          "text": "Public company profile, address, and contact details are listed.",
-          "link": "company.html"
-        }
-      ],
-      "flow": [
-        {
-          "step": "01",
-          "title": "Review Information",
-          "text": "Check company and business information."
-        },
-        {
-          "step": "02",
-          "title": "Review Products",
-          "text": "Check product categories and related information."
-        },
-        {
-          "step": "03",
-          "title": "Review Facilities",
-          "text": "View facilities, examples, and photos."
-        },
-        {
-          "step": "04",
-          "title": "Review Contact",
-          "text": "Use public contact information when needed."
         }
       ]
     },
@@ -895,34 +773,6 @@
         }
       ],
       "detailTitle": "Details"
-    },
-    "gallery": {
-      "metaTitle": "Gallery | Yoshigen Shoji Co., Ltd.",
-      "pageKicker": "GALLERY",
-      "pageTitle": "Photo Gallery",
-      "pageLead": "Photos of the company, facilities, yard, and product categories will be listed here.",
-      "sections": [
-        {
-          "title": "Company Exterior",
-          "text": "Photos conveying the company atmosphere will be added.",
-          "id": "company"
-        },
-        {
-          "title": "Yard",
-          "text": "Storage, sorting, and workflow photos will be added.",
-          "id": "yard"
-        },
-        {
-          "title": "Port and Shipment",
-          "text": "Shipment and transportation photos will be added.",
-          "id": "port"
-        },
-        {
-          "title": "Product Categories",
-          "text": "Photos of major metal scrap categories will be added.",
-          "id": "products"
-        }
-      ]
     },
     "contact": {
       "metaTitle": "Contact | Yoshigen Shoji Co., Ltd.",

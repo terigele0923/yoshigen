@@ -29,6 +29,12 @@
         target.innerHTML = stats.map((item) => `<div class="metric-item"><div class="metric-number"><span class="counter-number" data-count="${escapeHTML(item.number)}">0</span><span>${escapeHTML(item.suffix)}</span></div><p>${escapeHTML(item.label)}</p></div>`).join('');
     }
 
+    function renderNews(target, news) {
+        if (!target || !Array.isArray(news) || !news.length) return;
+        const items = news.map((item) => `<article class="news-ticker-item"><time>${escapeHTML(item.date)}</time><span>${escapeHTML(item.text)}</span></article>`).join('');
+        target.innerHTML = `<strong class="news-ticker-label">NEWS</strong><div class="news-ticker-window"><div class="news-ticker-track"><div class="news-ticker-group">${items}</div><div class="news-ticker-group" aria-hidden="true">${items}</div></div></div>`;
+    }
+
     function renderFeatureCards(target, items, linkLabel) {
         if (!target || !Array.isArray(items)) return;
         target.innerHTML = items.map((item, index) => `<article class="feature-card tilt-card" data-animate><span class="feature-index">${String(index + 1).padStart(2, '0')}</span><div><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div>${item.link ? `<a class="card-link" href="${escapeHTML(item.link)}">${escapeHTML(linkLabel || 'View more')}</a>` : ''}</article>`).join('');
@@ -37,11 +43,6 @@
     function renderHeroServices(target, items) {
         if (!target || !Array.isArray(items)) return;
         target.innerHTML = items.slice(0, 3).map((item) => `<a class="hero-quick-card" href="${escapeHTML(item.link || 'products.html')}"><strong>${escapeHTML(item.title)}</strong><span>${escapeHTML(item.text)}</span></a>`).join('');
-    }
-
-    function renderFlow(target, items) {
-        if (!target || !Array.isArray(items)) return;
-        target.innerHTML = items.map((item) => `<article class="flow-card" data-animate><span class="flow-step">${escapeHTML(item.step)}</span><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></article>`).join('');
     }
 
     function renderProducts(target, items, images) {
@@ -66,23 +67,16 @@
         }).join('');
     }
 
-    function renderGallery(target, items, images) {
-        if (!target || !Array.isArray(items)) return;
-        target.innerHTML = items.map((item) => `<article class="gallery-card tilt-card" data-animate><div class="gallery-visual" style="background-image:url('${escapeHTML(images[item.id] || '')}')"></div><div class="gallery-card-content"><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></article>`).join('');
-    }
-
     function renderDynamic(data, site) {
         const media = site.media;
-        document.querySelectorAll('[data-render="homeStats"]').forEach((target) => renderStats(target, data.home && data.home.stats));
+        renderNews(document.querySelector('[data-render="homeNews"]'), data.home && data.home.news);
         document.querySelectorAll('[data-render="heroServices"]').forEach((target) => renderHeroServices(target, data.home && data.home.services));
         renderFeatureCards(document.querySelector('[data-render="homeServices"]'), data.home && data.home.services, data.common && data.common.viewMore);
-        renderFlow(document.querySelector('[data-render="homeFlow"]'), data.home && data.home.flow);
         renderRows(document.querySelector('[data-render="companyOutline"]'), data.company && data.company.outline);
         renderFeatureCards(document.querySelector('[data-render="companyPhilosophy"]'), data.company && data.company.philosophy, data.common && data.common.viewMore);
         renderProducts(document.querySelector('[data-render="products"]'), data.products && data.products.items, media.products);
         renderCases(document.querySelector('[data-render="facilities"]'), data.facilities && data.facilities.cases, media.facilities);
         renderFacilityDetails(document.querySelector('[data-render="facilityDetails"]'), data.facilities && data.facilities.cases, media.facilities);
-        renderGallery(document.querySelector('[data-render="gallery"]'), data.gallery && data.gallery.sections, media.gallery);
         renderRows(document.querySelector('[data-render="contactRows"]'), data.contact && data.contact.contactRows);
         renderRows(document.querySelector('[data-render="bankRows"]'), data.contact && data.contact.bankRows);
     }

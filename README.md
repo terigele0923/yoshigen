@@ -10,13 +10,12 @@ HTML、CSS、JavaScript の静的サイトです。GitHub Pages ではリポジ�
 | `company.html` | 企業情報 |
 | `products.html` | 取扱商品 |
 | `facilities.html` | 設備・実例 |
-| `gallery.html` | 写真 |
 | `contact.html` | 連絡先・アクセス |
 
 ## 管理するファイル
 
 - `data/i18n.json`: 日本語 (`ja`)、中国語 (`zh`)、英語 (`en`) の文章と各一覧の項目。各項目の `id` は3言語で共通にします。
-- `data/site.json`: スライド画像と間隔、商品・設備・ギャラリーの画像、各ページの背景、Google Map の検索住所。画像パスはサイトのルートからの相対パスです。
+- `data/site.json`: スライド画像と間隔、商品・設備の画像、各ページの背景、Google Map の検索住所。画像パスはサイトのルートからの相対パスです。
 - `images/`: 画像ファイル。新しい商品写真は `images/photos/items/<品目>/`、設備・事業写真は `images/photos/services/` に置けます。使用するパスは `site.json` に指定します。
 - `css/style.css`: デザイン。
 - `js/i18n.js`: 2つの JSON を読み込み、文章・カード・画像・地図を表示します。

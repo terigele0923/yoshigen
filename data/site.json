@@ -24,12 +24,6 @@
       "yard": "images/background-image.png",
       "sorting": "images/background-image02.png",
       "shipment": "images/background-images03.png"
-    },
-    "gallery": {
-      "company": "images/background-image.png",
-      "yard": "images/background-image02.png",
-      "port": "images/background-images03.png",
-      "products": "images/background-image.png"
     }
   },
   "contact": {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="株式会社 吉源商事の公式ホームページ。金属スクラップ買取、選別、保管、輸出に関する企業情報を掲載しています。">
     <title data-title-key="home.metaTitle">株式会社 吉源商事｜金属リサイクル・資源循環</title>
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body data-page="home">
 <header class="site-header" data-active-page="home">
@@ -20,7 +20,6 @@
 <a href="company.html" data-nav="company" data-i18n="common.nav.company">企業情報</a>
 <a href="products.html" data-nav="products" data-i18n="common.nav.products">取扱商品</a>
 <a href="facilities.html" data-nav="facilities" data-i18n="common.nav.facilities">設備・実例</a>
-<a href="gallery.html" data-nav="gallery" data-i18n="common.nav.gallery">ギャラリー</a>
 <a href="contact.html" data-nav="contact" data-i18n="common.nav.contact">お問い合わせ</a></nav>
         <div class="lang-switch" aria-label="Language switch">
             <button type="button" data-lang="ja">日本語</button>
@@ -31,6 +30,9 @@
 </header>
 <main>
     <section class="eco-hero">
+        <div class="container news-ticker-shell">
+            <aside class="news-ticker glass-panel" data-render="homeNews" aria-label="NEWS"></aside>
+        </div>
         <div id="lpCarousel" class="hero-carousel"><div class="hero-track"><div class="hero-slide active">
             <div class="hero-shade" aria-hidden="true"></div>
             <canvas class="motion-canvas" aria-hidden="true"></canvas>
@@ -45,31 +47,17 @@
                     </div>
                     <div class="hero-quick" data-render="heroServices"></div>
                 </div>
-                <div class="metric-board glass-panel" data-render="homeStats"></div>
             </div>
-        </div></div></div>
+        </div></div>
         <button class="slider-arrow prev" type="button" data-slide="prev" aria-label="Previous slide">‹</button>
         <button class="slider-arrow next" type="button" data-slide="next" aria-label="Next slide">›</button>
         <div class="slider-dots" aria-hidden="true"></div>
-    </section>
-    <section class="section split-section">
-        <div class="container split-grid">
-            <div class="orbital-card tilt-card" data-animate>
-                <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit-core">Recycle</span>
-            </div>
-            <div data-animate><p class="section-kicker">ABOUT</p><h2 class="section-title" data-i18n="home.aboutTitle"></h2><p class="body-text" data-i18n="home.aboutText"></p></div>
         </div>
     </section>
     <section class="section section-soft">
         <div class="container">
             <div class="section-heading" data-animate><p class="section-kicker">SERVICE</p><h2 class="section-title" data-i18n="home.servicesTitle"></h2></div>
             <div class="feature-grid" data-render="homeServices"></div>
-        </div>
-    </section>
-    <section class="section">
-        <div class="container">
-            <div class="section-heading" data-animate><p class="section-kicker">FLOW</p><h2 class="section-title" data-i18n="home.flowTitle"></h2></div>
-            <div class="flow-line" data-render="homeFlow"></div>
         </div>
     </section>
     <section class="section page-links-section">
@@ -79,7 +67,6 @@
         <div class="page-link-grid"><a class="page-link-card" href="company.html"><span data-i18n="common.nav.company"></span><b>→</b></a>
 <a class="page-link-card" href="products.html"><span data-i18n="common.nav.products"></span><b>→</b></a>
 <a class="page-link-card" href="facilities.html"><span data-i18n="common.nav.facilities"></span><b>→</b></a>
-<a class="page-link-card" href="gallery.html"><span data-i18n="common.nav.gallery"></span><b>→</b></a>
 <a class="page-link-card" href="contact.html"><span data-i18n="common.nav.contact"></span><b>→</b></a></div>
     </div>
 </section>
@@ -96,7 +83,7 @@
         <p class="copyright" data-i18n="common.copyright"></p>
     </div>
 </footer>
-<script src="js/i18n.js?v=5"></script>
+<script src="js/i18n.js?v=6"></script>
 <script src="js/main.js?v=5"></script>
 </body>
 </html>
