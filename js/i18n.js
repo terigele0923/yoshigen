@@ -13,6 +13,14 @@
         return path.split('.').reduce((value, key) => value && value[key], source);
     }
 
+    function localize(value, lang) {
+        if (Array.isArray(value)) return value.map((item) => localize(item, lang));
+        if (!value || typeof value !== 'object') return value;
+        const keys = Object.keys(value);
+        if (keys.length === LANGS.length && LANGS.every((language) => Object.hasOwn(value, language))) return value[lang];
+        return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, localize(item, lang)]));
+    }
+
     function currentLang() {
         const param = new URLSearchParams(window.location.search).get('lang');
         const saved = window.localStorage.getItem('yoshigen-lang');
@@ -45,25 +53,61 @@
         target.innerHTML = items.slice(0, 3).map((item) => `<a class="hero-quick-card" href="${escapeHTML(item.link || 'products.html')}"><strong>${escapeHTML(item.title)}</strong><span>${escapeHTML(item.text)}</span></a>`).join('');
     }
 
-    function renderProducts(target, items, images) {
-        if (!target || !Array.isArray(items)) return;
-        target.innerHTML = items.map((item) => `<article class="product-card tilt-card" data-animate><div class="product-visual" style="background-image:url('${escapeHTML(images[item.id] || '')}')"></div><div class="product-card-content"><span class="category-pill">${escapeHTML(item.category)}</span><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></article>`).join('');
+    function renderProductToc(target, groups) {
+        if (!target || !Array.isArray(groups)) return;
+        const links = groups.map((group) => `<a href="#product-group-${escapeHTML(group.id)}"><span>${escapeHTML(group.title)}</span><b aria-hidden="true">→</b></a>`).join('');
+        target.innerHTML = `<div class="product-toc-links">${links}</div>`;
+    }
+
+    function selectProductGroup(targetId) {
+        const sections = Array.from(document.querySelectorAll('.product-group'));
+        if (!sections.length) return;
+        const selected = sections.find((section) => section.id === targetId) || sections[0];
+        sections.forEach((section) => {
+            section.hidden = section !== selected;
+        });
+        document.querySelectorAll('.product-toc-links a').forEach((link) => {
+            const active = link.hash === `#${selected.id}`;
+            link.classList.toggle('active', active);
+            if (active) link.setAttribute('aria-current', 'true');
+            else link.removeAttribute('aria-current');
+        });
+    }
+
+    function renderProductCard(item, images) {
+        return `<article class="product-card tilt-card" data-animate><div class="product-visual" style="background-image:url('${escapeHTML(images[item.id] || '')}')"></div><div class="product-card-content"><span class="category-pill">${escapeHTML(item.category)}</span><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></article>`;
+    }
+
+    function renderProducts(target, items, groups, images) {
+        if (!target || !Array.isArray(items) || !Array.isArray(groups)) return;
+        const itemsById = Object.fromEntries(items.map((item) => [item.id, item]));
+        target.innerHTML = groups.map((group, index) => {
+            const cards = group.itemIds.map((id) => itemsById[id]).filter(Boolean).map((item) => renderProductCard(item, images)).join('');
+            return `<section class="product-group" id="product-group-${escapeHTML(group.id)}"><div class="product-group-heading" data-animate><span>${String(index + 1).padStart(2, '0')}</span><h2>${escapeHTML(group.title)}</h2></div><div class="product-grid">${cards}</div></section>`;
+        }).join('');
+        selectProductGroup(window.location.hash.slice(1));
     }
 
     function renderCases(target, items, images) {
         if (!target || !Array.isArray(items)) return;
-        target.innerHTML = items.map((item, index) => {
+        target.innerHTML = items.map((item) => {
             const image = images[item.id] || '';
-            return `<a class="case-card tilt-card" data-animate href="#facility-detail-${index + 1}" style="--case-bg:url('${escapeHTML(image)}')"><div class="case-stat">${escapeHTML(item.stat)}</div><div><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></a>`;
+            return `<a class="case-card tilt-card" data-animate href="#facility-${escapeHTML(item.id)}" style="--case-bg:url('${escapeHTML(image)}')"><div class="case-stat">${escapeHTML(item.stat)}</div><div><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></a>`;
         }).join('');
     }
 
     function renderFacilityDetails(target, items, images) {
         if (!target || !Array.isArray(items)) return;
         target.innerHTML = items.map((item, index) => {
-            const points = Array.isArray(item.detailItems) ? item.detailItems : [];
-            const pointList = points.map((point) => `<li>${escapeHTML(point)}</li>`).join('');
-            return `<article class="facility-detail" id="facility-detail-${index + 1}" data-animate><div class="facility-detail-visual" style="background-image:url('${escapeHTML(images[item.id] || '')}')"></div><div class="facility-detail-body"><p class="section-kicker">${escapeHTML(item.stat || String(index + 1).padStart(2, '0'))}</p><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.detailLead || item.text)}</p>${pointList ? `<ul class="detail-list">${pointList}</ul>` : ''}</div></article>`;
+            const backgroundClass = index % 2 === 0 ? ' section-soft' : '';
+            const details = Array.isArray(item.details) ? item.details : [];
+            const detailCards = details.map((detail, detailIndex) => {
+                const points = Array.isArray(detail.items) ? detail.items : [];
+                const pointList = points.map((point) => `<li>${escapeHTML(point)}</li>`).join('');
+                const image = images[detail.imageId || item.id] || '';
+                return `<article class="facility-detail" id="facility-${escapeHTML(item.id)}-${escapeHTML(detail.id)}" data-animate><div class="facility-detail-visual" style="background-image:url('${escapeHTML(image)}')"></div><div class="facility-detail-body"><p class="section-kicker">${String(detailIndex + 1).padStart(2, '0')}</p><h3>${escapeHTML(detail.title)}</h3><p>${escapeHTML(detail.text)}</p>${pointList ? `<ul class="detail-list">${pointList}</ul>` : ''}</div></article>`;
+            }).join('');
+            return `<section class="section facility-detail-section${backgroundClass}" id="facility-${escapeHTML(item.id)}"><div class="container"><div class="section-heading" data-animate><p class="section-kicker">${escapeHTML(item.stat || String(index + 1).padStart(2, '0'))}</p><h2 class="section-title">${escapeHTML(item.title)}</h2><p>${escapeHTML(item.text)}</p></div><div class="facility-detail-list">${detailCards}</div></div></section>`;
         }).join('');
     }
 
@@ -74,7 +118,8 @@
         renderFeatureCards(document.querySelector('[data-render="homeServices"]'), data.home && data.home.services, data.common && data.common.viewMore);
         renderRows(document.querySelector('[data-render="companyOutline"]'), data.company && data.company.outline);
         renderFeatureCards(document.querySelector('[data-render="companyPhilosophy"]'), data.company && data.company.philosophy, data.common && data.common.viewMore);
-        renderProducts(document.querySelector('[data-render="products"]'), data.products && data.products.items, media.products);
+        renderProductToc(document.querySelector('[data-render="productToc"]'), data.products && data.products.groups);
+        renderProducts(document.querySelector('[data-render="products"]'), data.products && data.products.items, data.products && data.products.groups, media.products);
         renderCases(document.querySelector('[data-render="facilities"]'), data.facilities && data.facilities.cases, media.facilities);
         renderFacilityDetails(document.querySelector('[data-render="facilityDetails"]'), data.facilities && data.facilities.cases, media.facilities);
         renderRows(document.querySelector('[data-render="contactRows"]'), data.contact && data.contact.contactRows);
@@ -120,13 +165,14 @@
 
     async function applyLanguage(lang) {
         const [all, site] = await Promise.all([loadDictionary(), loadSiteConfig()]);
+        const selectedLang = LANGS.includes(lang) ? lang : 'ja';
         if (!document.body.dataset.siteReady) {
             renderSite(site);
             document.body.dataset.siteReady = 'true';
         }
-        const data = all[lang] || all.ja;
-        document.documentElement.lang = lang;
-        window.localStorage.setItem('yoshigen-lang', lang);
+        const data = localize(all, selectedLang);
+        document.documentElement.lang = selectedLang;
+        window.localStorage.setItem('yoshigen-lang', selectedLang);
         document.querySelectorAll('[data-i18n]').forEach((node) => {
             const value = getValue(data, node.dataset.i18n);
             if (value !== undefined) node.textContent = value;
@@ -138,7 +184,7 @@
         }
         document.querySelectorAll('.lang-switch button').forEach((button) => {
             button.textContent = labels[button.dataset.lang] || button.dataset.lang;
-            button.classList.toggle('active', button.dataset.lang === lang);
+            button.classList.toggle('active', button.dataset.lang === selectedLang);
         });
         renderDynamic(data, site);
         window.dispatchEvent(new CustomEvent('yoshigen:i18n-ready'));
@@ -149,5 +195,13 @@
         document.querySelectorAll('.lang-switch button').forEach((button) => {
             button.addEventListener('click', () => applyLanguage(button.dataset.lang).catch((error) => console.error('i18n switch failed:', error)));
         });
+        document.addEventListener('click', (event) => {
+            const link = event.target.closest('.product-toc-links a[href^="#product-group-"]');
+            if (!link) return;
+            event.preventDefault();
+            window.history.replaceState(null, '', link.hash);
+            selectProductGroup(link.hash.slice(1));
+        });
+        window.addEventListener('hashchange', () => selectProductGroup(window.location.hash.slice(1)));
     });
 })();

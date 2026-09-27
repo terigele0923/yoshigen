@@ -1,830 +1,982 @@
 {
-  "ja": {
-    "common": {
-      "companyName": "株式会社 吉源商事",
-      "tagline": "資源循環と国際流通をつなぐ金属リサイクルパートナー",
-      "nav": {
-        "home": "トップ",
-        "company": "企業情報",
-        "products": "取扱商品",
-        "facilities": "設備・実例",
-        "contact": "お問い合わせ"
+  "common": {
+    "companyName": {
+      "ja": "株式会社 吉源商事",
+      "zh": "株式会社 吉源商事",
+      "en": "Yoshigen Shoji Co., Ltd."
+    },
+    "tagline": {
+      "ja": "資源循環と国際流通をつなぐ金属リサイクルパートナー",
+      "zh": "连接资源循环与国际流通的金属回收伙伴",
+      "en": "A metal recycling partner connecting resource circulation and global distribution"
+    },
+    "nav": {
+      "home": {
+        "ja": "トップ",
+        "zh": "首页",
+        "en": "Home"
       },
-      "language": "表示言語",
-      "footerLead": "資源循環に関する事業情報、取扱品目、設備、連絡先を分かりやすく掲載しています。",
-      "footerNote": "本サイトは正式公開前の構成案です。文章・写真・会社情報は順次差し替え予定です。",
-      "copyright": "© 2026 Yoshigen Shoji Co., Ltd. All Rights Reserved.",
-      "viewMore": "詳しく見る",
-      "relatedTitle": "関連ページ",
-      "ctaTitle": "事業内容・取扱品目について",
-      "ctaText": "掲載情報をご確認のうえ、必要に応じて公開連絡先よりお問い合わせください。",
-      "ctaButton": "お問い合わせ情報へ"
+      "company": {
+        "ja": "企業情報",
+        "zh": "企业信息",
+        "en": "Company"
+      },
+      "products": {
+        "ja": "取扱商品",
+        "zh": "经营品类",
+        "en": "Products"
+      },
+      "facilities": {
+        "ja": "設備・実例",
+        "zh": "设备与案例",
+        "en": "Facilities"
+      },
+      "contact": {
+        "ja": "お問い合わせ",
+        "zh": "联系方式",
+        "en": "Contact"
+      }
     },
-    "home": {
-      "metaTitle": "株式会社 吉源商事｜金属リサイクル・資源循環",
-      "heroKicker": "GREEN RESOURCE CIRCULATION",
-      "heroTitle": "資源を活かし、次へつなぐ。",
-      "heroLead": "金属スクラップの買取・選別から保管・出荷まで、金属資源の再利用を支えています。",
-      "heroPrimary": "取扱商品を見る",
-      "heroSecondary": "会社情報を見る",
-      "servicesTitle": "主なサービス",
-      "productsTitle": "取扱商品の一例",
-            "news": [
-              { "date": "2026.09.27", "text": "株式会社 吉源商事の公式ホームページを公開しました。" },
-              { "date": "2026.09.27", "text": "金属スクラップの買取・お取引に関するご相談を受け付けています。" }
-            ],
-      "stats": [
-        {
-          "number": "6",
-          "suffix": "page",
-          "label": "外部向け情報"
-        },
-        {
-          "number": "3",
-          "suffix": "lang",
-          "label": "日本語・中国語・英語"
-        },
-        {
-          "number": "9",
-          "suffix": "types",
-          "label": "主要取扱品目"
-        }
-      ],
-      "services": [
-        {
-          "title": "買取・選別",
-          "text": "金属スクラップの品目や状態を確認し、内容に応じて選別します。",
-          "link": "facilities.html"
-        },
-        {
-          "title": "保管・出荷",
-          "text": "資源を適切に保管し、国内外への出荷につなげます。",
-          "link": "facilities.html"
-        },
-        {
-          "title": "金属資源の取扱い",
-          "text": "鉄・銅・アルミなど、さまざまな金属スクラップを取り扱います。",
-          "link": "products.html"
-        }
-      ]
+    "language": {
+      "ja": "表示言語",
+      "zh": "显示语言",
+      "en": "Language"
     },
-    "company": {
-      "metaTitle": "企業情報｜株式会社 吉源商事",
-      "pageKicker": "COMPANY",
-      "pageTitle": "企業情報",
-      "pageLead": "会社の基本情報、代表メッセージ、事業姿勢を掲載するページです。",
-      "messageTitle": "社長メッセージ",
-      "messageText": "平素より格別のご高配を賜り、誠にありがとうございます。当社は、資源を大切に扱い、関係者の皆さまに安心してご確認いただける情報発信を心がけております。今後も誠実な姿勢を大切にし、地域社会と取引先の皆さまに信頼される企業を目指してまいります。",
-      "outlineTitle": "会社概要",
-      "philosophyTitle": "大切にしている姿勢",
-      "outline": [
-        {
-          "label": "会社名",
-          "value": "株式会社 吉源商事"
-        },
-        {
-          "label": "事業内容",
-          "value": "金属資源に関する買取、選別、保管、出荷など"
-        },
-        {
-          "label": "取扱品目",
-          "value": "鉄、非鉄金属、線材、機械類など"
-        },
-        {
-          "label": "所在地",
-          "value": "千葉県佐倉市坂戸1371-1"
-        },
-        {
-          "label": "代表者",
-          "value": "代表者名を掲載予定"
-        }
-      ],
-      "philosophy": [
-        {
-          "title": "分かりやすい情報",
-          "text": "外部の方が確認しやすいよう、情報を整理して掲載します。"
-        },
-        {
-          "title": "誠実な対応",
-          "text": "関係者の皆さまに安心していただける姿勢を大切にします。"
-        },
-        {
-          "title": "継続的な改善",
-          "text": "写真、文章、情報を必要に応じて更新していきます。"
-        }
-      ],
-      "messageSignature": "代表取締役　氏名掲載予定"
+    "footerLead": {
+      "ja": "資源循環に関する事業情報、取扱品目、設備、連絡先を分かりやすく掲載しています。",
+      "zh": "本网站用于清晰展示资源循环相关业务、经营品类、设备和联系方式。",
+      "en": "This website presents resource circulation business information, product categories, facilities, and contact details clearly."
     },
-    "products": {
-      "metaTitle": "取扱商品｜株式会社 吉源商事",
-      "pageKicker": "PRODUCTS",
-      "pageTitle": "取扱商品",
-      "pageLead": "取扱品目の概要を一覧で確認できるページです。正式写真と説明文は順次差し替え予定です。",
-      "items": [
-        {
-          "title": "鉄スクラップ",
-          "category": "Ferrous",
-          "text": "建築、工場、解体現場などから発生する鉄系スクラップを取り扱います。",
-          "id": "steel"
-        },
-        {
-          "title": "銅",
-          "category": "Copper",
-          "text": "銅線、銅材、銅屑など、再資源化価値の高い非鉄金属を扱います。",
-          "id": "copper"
-        },
-        {
-          "title": "アルミ",
-          "category": "Aluminum",
-          "text": "アルミサッシ、アルミ材、機械部品などを状態に応じて確認します。",
-          "id": "aluminum"
-        },
-        {
-          "title": "ステンレス",
-          "category": "Stainless",
-          "text": "耐食性を持つステンレス材を種類ごとに整理し、出荷します。",
-          "id": "stainless"
-        },
-        {
-          "title": "真鍮",
-          "category": "Brass",
-          "text": "真鍮部品、バルブ、金具類などを取り扱います。",
-          "id": "brass"
-        },
-        {
-          "title": "雑線",
-          "category": "Wire",
-          "text": "各種電線、ケーブル類を素材・状態に合わせて確認します。",
-          "id": "wire"
-        },
-        {
-          "title": "モーター",
-          "category": "Motor",
-          "text": "工場設備や機械から発生するモーター類を取り扱います。",
-          "id": "motor"
-        },
-        {
-          "title": "工業機械",
-          "category": "Machinery",
-          "text": "使用済み機械、設備部材などを個別条件に応じて相談できます。",
-          "id": "machinery"
-        },
-        {
-          "title": "解体金属",
-          "category": "Demolition",
-          "text": "解体現場から発生する金属資源の確認、整理、出荷に対応します。",
-          "id": "demolition-metal"
-        }
-      ]
+    "footerNote": {
+      "ja": "本サイトは正式公開前の構成案です。文章・写真・会社情報は順次差し替え予定です。",
+      "zh": "当前内容为正式公开前的草案，文字、照片和公司信息将陆续替换。",
+      "en": "This is a draft before official release. Text, photos, and company details will be replaced as needed."
     },
-    "facilities": {
-      "metaTitle": "設備・実例｜株式会社 吉源商事",
-      "pageKicker": "FACILITIES",
-      "pageTitle": "設備・実例",
-      "pageLead": "設備、作業環境、実例写真などを紹介するためのページです。",
-      "cases": [
-        {
-          "title": "設備・ヤード",
-          "text": "保管場所や作業環境の概要を、写真と合わせて掲載します。",
-          "stat": "YARD",
-          "detailLead": "設備・ヤードに関する仮の詳細説明です。正式公開時には、敷地、保管場所、作業導線、設備写真などを掲載します。",
-          "detailItems": [
-            "保管場所の概要",
-            "作業環境の紹介",
-            "安全管理に関する説明"
-          ],
-          "id": "yard"
-        },
-        {
-          "title": "選別・管理",
-          "text": "品目ごとの整理や管理に関する情報を掲載します。",
-          "stat": "SORT",
-          "detailLead": "選別・管理に関する仮の詳細説明です。正式公開時には、品目ごとの整理方法や管理体制の写真を掲載します。",
-          "detailItems": [
-            "品目別の整理",
-            "保管状態の確認",
-            "管理体制の紹介"
-          ],
-          "id": "sorting"
-        },
-        {
-          "title": "出荷・連携",
-          "text": "出荷や関連作業の流れを、分かりやすく紹介します。",
-          "stat": "SHIP",
-          "detailLead": "出荷・連携に関する仮の詳細説明です。正式公開時には、出荷準備、輸送、関係先との連携内容を掲載します。",
-          "detailItems": [
-            "出荷準備の流れ",
-            "輸送に関する概要",
-            "関係先との連携"
-          ],
-          "id": "shipment"
-        }
-      ],
-      "detailTitle": "詳細情報"
+    "copyright": "© 2026 Yoshigen Shoji Co., Ltd. All Rights Reserved.",
+    "viewMore": {
+      "ja": "詳しく見る",
+      "zh": "查看详情",
+      "en": "View more"
     },
-    "contact": {
-      "metaTitle": "お問い合わせ｜株式会社 吉源商事",
-      "pageKicker": "CONTACT",
-      "pageTitle": "お問い合わせ情報",
-      "pageLead": "公開連絡先、所在地、銀行口座情報などを確認できるページです。",
-      "contactTitle": "公開連絡先",
-      "bankTitle": "銀行口座情報",
-      "bankNote": "以下は仮情報です。正式公開時に正しい情報へ差し替えてください。",
-      "contactRows": [
-        {
-          "label": "会社名",
-          "value": "株式会社 吉源商事"
-        },
-        {
-          "label": "電話番号",
-          "value": "000-0000-0000"
-        },
-        {
-          "label": "メール",
-          "value": "info@example.com"
-        },
-        {
-          "label": "所在地",
-          "value": "千葉県佐倉市坂戸1371-1"
-        }
-      ],
-      "bankRows": [
-        {
-          "label": "銀行名",
-          "value": "〇〇銀行"
-        },
-        {
-          "label": "支店名",
-          "value": "〇〇支店"
-        },
-        {
-          "label": "口座種別",
-          "value": "普通"
-        },
-        {
-          "label": "口座番号",
-          "value": "0000000"
-        },
-        {
-          "label": "口座名義",
-          "value": "株式会社 吉源商事"
-        }
-      ],
-      "mapTitle": "アクセス",
-      "mapText": "所在地を地図で確認できます。ご来訪の際は、事前に公開連絡先よりご確認ください。",
-      "mapAddress": "千葉県佐倉市坂戸1371-1"
+    "relatedTitle": {
+      "ja": "関連ページ",
+      "zh": "相关页面",
+      "en": "Related Pages"
+    },
+    "ctaTitle": {
+      "ja": "事業内容・取扱品目について",
+      "zh": "关于业务内容与经营品类",
+      "en": "Business and Product Information"
+    },
+    "ctaText": {
+      "ja": "掲載情報をご確認のうえ、必要に応じて公開連絡先よりお問い合わせください。",
+      "zh": "请确认网站公开信息，并根据需要通过公开联系方式咨询。",
+      "en": "Please review the public information and use the listed contact details when needed."
+    },
+    "ctaButton": {
+      "ja": "お問い合わせ情報へ",
+      "zh": "查看联系方式",
+      "en": "View Contact Information"
     }
   },
-  "zh": {
-    "common": {
-      "companyName": "株式会社 吉源商事",
-      "tagline": "连接资源循环与国际流通的金属回收伙伴",
-      "nav": {
-        "home": "首页",
-        "company": "企业信息",
-        "products": "经营品类",
-        "facilities": "设备与案例",
-        "contact": "联系方式"
+  "home": {
+    "metaTitle": {
+      "ja": "株式会社 吉源商事｜金属リサイクル・資源循環",
+      "zh": "株式会社 吉源商事｜金属回收与资源循环",
+      "en": "Yoshigen Shoji Co., Ltd. | Metal Recycling and Resource Circulation"
+    },
+    "heroKicker": "GREEN RESOURCE CIRCULATION",
+    "heroTitle": {
+      "ja": "資源を活かし、次へつなぐ。",
+      "zh": "让资源延续到下一步。",
+      "en": "Carrying Resources Forward."
+    },
+    "heroLead": {
+      "ja": "金属スクラップの買取・選別から保管・出荷まで、金属資源の再利用を支えています。",
+      "zh": "我们开展金属废料收购、分选、保管与发货业务，支持金属资源循环利用。",
+      "en": "We purchase, sort, store, and ship metal scrap to support the reuse of metal resources."
+    },
+    "heroPrimary": {
+      "ja": "取扱商品を見る",
+      "zh": "查看经营品类",
+      "en": "View Products"
+    },
+    "heroSecondary": {
+      "ja": "会社情報を見る",
+      "zh": "查看公司信息",
+      "en": "Company Profile"
+    },
+    "servicesTitle": {
+      "ja": "主なサービス",
+      "zh": "主要服务",
+      "en": "Core Services"
+    },
+    "productsTitle": {
+      "ja": "取扱商品の一例",
+      "zh": "经营品类示例",
+      "en": "Product Categories"
+    },
+    "news": [
+      {
+        "date": "2026.09.27",
+        "text": {
+          "ja": "株式会社 吉源商事の公式ホームページを公開しました。",
+          "zh": "株式会社吉源商事官方网站现已上线。",
+          "en": "The official Yoshigen Shoji website is now live."
+        }
       },
-      "language": "显示语言",
-      "footerLead": "本网站用于清晰展示资源循环相关业务、经营品类、设备和联系方式。",
-      "footerNote": "当前内容为正式公开前的草案，文字、照片和公司信息将陆续替换。",
-      "copyright": "© 2026 Yoshigen Shoji Co., Ltd. All Rights Reserved.",
-      "viewMore": "查看详情",
-      "relatedTitle": "相关页面",
-      "ctaTitle": "关于业务内容与经营品类",
-      "ctaText": "请确认网站公开信息，并根据需要通过公开联系方式咨询。",
-      "ctaButton": "查看联系方式"
+      {
+        "date": "2026.09.27",
+        "text": {
+          "ja": "金属スクラップの買取・お取引に関するご相談を受け付けています。",
+          "zh": "现接受金属废料回收及业务合作相关咨询。",
+          "en": "We welcome inquiries about scrap metal purchasing and business transactions."
+        }
+      }
+    ],
+    "stats": [
+      {
+        "number": "6",
+        "suffix": "page",
+        "label": "外部向け情報"
+      },
+      {
+        "number": "3",
+        "suffix": "lang",
+        "label": "日本語・中国語・英語"
+      },
+      {
+        "number": "9",
+        "suffix": "types",
+        "label": "主要取扱品目"
+      }
+    ],
+    "services": [
+      {
+        "title": {
+          "ja": "買取・選別",
+          "zh": "收购与分选",
+          "en": "Purchasing and Sorting"
+        },
+        "text": {
+          "ja": "金属スクラップの品目や状態を確認し、内容に応じて選別します。",
+          "zh": "确认金属废料的品类与状态，并根据具体情况进行分选。",
+          "en": "We assess metal scrap by type and condition, then sort it accordingly."
+        },
+        "link": "facilities.html"
+      },
+      {
+        "title": {
+          "ja": "保管・出荷",
+          "zh": "保管与发货",
+          "en": "Storage and Shipment"
+        },
+        "text": {
+          "ja": "資源を適切に保管し、国内外への出荷につなげます。",
+          "zh": "妥善保管资源，并安排发往国内外。",
+          "en": "We store resources appropriately and arrange shipments in Japan and overseas."
+        },
+        "link": "facilities.html"
+      },
+      {
+        "title": {
+          "ja": "金属資源の取扱い",
+          "zh": "金属资源品类",
+          "en": "Metal Scrap Categories"
+        },
+        "text": {
+          "ja": "鉄・銅・アルミなど、さまざまな金属スクラップを取り扱います。",
+          "zh": "经营铁、铜、铝等多种金属废料。",
+          "en": "We handle a range of metal scrap, including steel, copper, and aluminum."
+        },
+        "link": "products.html"
+      }
+    ]
+  },
+  "company": {
+    "metaTitle": {
+      "ja": "企業情報｜株式会社 吉源商事",
+      "zh": "企业信息｜株式会社 吉源商事",
+      "en": "Company | Yoshigen Shoji Co., Ltd."
     },
-    "home": {
-      "metaTitle": "株式会社 吉源商事｜金属回收与资源循环",
-      "heroKicker": "GREEN RESOURCE CIRCULATION",
-      "heroTitle": "让资源延续到下一步。",
-      "heroLead": "我们开展金属废料收购、分选、保管与发货业务，支持金属资源循环利用。",
-      "heroPrimary": "查看经营品类",
-      "heroSecondary": "查看公司信息",
-      "servicesTitle": "主要服务",
-      "productsTitle": "经营品类示例",
-            "news": [
-              { "date": "2026.09.27", "text": "株式会社吉源商事官方网站现已上线。" },
-              { "date": "2026.09.27", "text": "现接受金属废料回收及业务合作相关咨询。" }
-            ],
-      "stats": [
-        {
-          "number": "6",
-          "suffix": "page",
-          "label": "外部向け情報"
-        },
-        {
-          "number": "3",
-          "suffix": "lang",
-          "label": "日本語・中国語・英語"
-        },
-        {
-          "number": "9",
-          "suffix": "types",
-          "label": "主要取扱品目"
-        }
-      ],
-      "services": [
-        {
-          "title": "收购与分选",
-          "text": "确认金属废料的品类与状态，并根据具体情况进行分选。",
-          "link": "facilities.html"
-        },
-        {
-          "title": "保管与发货",
-          "text": "妥善保管资源，并安排发往国内外。",
-          "link": "facilities.html"
-        },
-        {
-          "title": "金属资源品类",
-          "text": "经营铁、铜、铝等多种金属废料。",
-          "link": "products.html"
-        }
-      ]
+    "pageKicker": "COMPANY",
+    "pageTitle": {
+      "ja": "企業情報",
+      "zh": "企业信息",
+      "en": "Company"
     },
-    "company": {
-      "metaTitle": "企业信息｜株式会社 吉源商事",
-      "pageKicker": "COMPANY",
-      "pageTitle": "企业信息",
-      "pageLead": "刊登公司基本信息、代表致辞和业务方针。",
-      "messageTitle": "代表致辞",
-      "messageText": "感谢各位一直以来的支持。本公司重视资源的合理利用，并努力提供便于相关人员确认的信息。今后也将保持诚信的态度，努力成为让客户和地区社会信赖的企业。",
-      "outlineTitle": "公司概要",
-      "philosophyTitle": "我们的重视事项",
-      "outline": [
-        {
-          "label": "公司名称",
-          "value": "株式会社 吉源商事"
-        },
-        {
-          "label": "业务内容",
-          "value": "金属资源相关的收购、分选、保管、出货等"
-        },
-        {
-          "label": "经营品类",
-          "value": "铁、有色金属、线材、机械类等"
-        },
-        {
-          "label": "地址",
-          "value": "千叶县佐仓市坂户1371-1"
-        },
-        {
-          "label": "代表者",
-          "value": "代表者姓名预定刊登"
-        }
-      ],
-      "philosophy": [
-        {
-          "title": "清晰的信息",
-          "text": "整理并刊登便于外部人员确认的信息。"
-        },
-        {
-          "title": "诚信的态度",
-          "text": "重视让相关人员安心的对应方式。"
-        },
-        {
-          "title": "持续改进",
-          "text": "根据需要更新照片、文字和信息。"
-        }
-      ],
-      "messageSignature": "代表董事　姓名预定刊登"
+    "pageLead": {
+      "ja": "会社の基本情報、代表メッセージ、事業姿勢を掲載するページです。",
+      "zh": "刊登公司基本信息、代表致辞和业务方针。",
+      "en": "Basic company information, representative message, and business principles are listed here."
     },
-    "products": {
-      "metaTitle": "经营品类｜株式会社 吉源商事",
-      "pageKicker": "PRODUCTS",
-      "pageTitle": "经营品类",
-      "pageLead": "此页面用于以列表形式介绍经营品类概要。正式照片和说明将陆续替换。",
-      "items": [
-        {
-          "title": "铁废料",
-          "category": "Ferrous",
-          "text": "经营建筑、工厂、拆解现场等产生的铁类废料。",
-          "id": "steel"
-        },
-        {
-          "title": "铜",
-          "category": "Copper",
-          "text": "经营铜线、铜材、铜屑等再资源化价值较高的有色金属。",
-          "id": "copper"
-        },
-        {
-          "title": "铝",
-          "category": "Aluminum",
-          "text": "根据状态确认铝窗框、铝材、机械部件等。",
-          "id": "aluminum"
-        },
-        {
-          "title": "不锈钢",
-          "category": "Stainless",
-          "text": "按种类整理耐腐蚀的不锈钢材料并出货。",
-          "id": "stainless"
-        },
-        {
-          "title": "黄铜",
-          "category": "Brass",
-          "text": "经营黄铜部件、阀门、金属配件等。",
-          "id": "brass"
-        },
-        {
-          "title": "电线",
-          "category": "Wire",
-          "text": "确认各种电线、电缆的材料和状态。",
-          "id": "wire"
-        },
-        {
-          "title": "马达",
-          "category": "Motor",
-          "text": "经营工厂设备和机械中产生的马达类。",
-          "id": "motor"
-        },
-        {
-          "title": "工业机械",
-          "category": "Machinery",
-          "text": "旧机械、设备部材等可按个别条件咨询。",
-          "id": "machinery"
-        },
-        {
-          "title": "拆解金属",
-          "category": "Demolition",
-          "text": "对应拆解现场产生的金属资源确认、整理和出货。",
-          "id": "demolition-metal"
-        }
-      ]
+    "messageTitle": {
+      "ja": "社長メッセージ",
+      "zh": "代表致辞",
+      "en": "President Message"
     },
-    "facilities": {
-      "metaTitle": "设备与案例｜株式会社 吉源商事",
-      "pageKicker": "FACILITIES",
-      "pageTitle": "设备与案例",
-      "pageLead": "此页面用于介绍设备、作业环境和案例照片。",
-      "cases": [
-        {
-          "title": "设备与场地",
-          "text": "结合照片介绍保管场地和作业环境概要。",
-          "stat": "YARD",
-          "detailLead": "这是设备与场地的临时详细说明。正式公开时将刊登场地、保管区域、作业动线和设备照片。",
-          "detailItems": [
-            "保管区域概要",
-            "作业环境介绍",
-            "安全管理说明"
-          ],
-          "id": "yard"
-        },
-        {
-          "title": "分选与管理",
-          "text": "刊登按品类整理和管理相关的信息。",
-          "stat": "SORT",
-          "detailLead": "这是分选与管理的临时详细说明。正式公开时将刊登按品类整理的方法和管理体制照片。",
-          "detailItems": [
-            "按品类整理",
-            "保管状态确认",
-            "管理体制介绍"
-          ],
-          "id": "sorting"
-        },
-        {
-          "title": "出货与联动",
-          "text": "以清晰方式介绍出货和相关作业流程。",
-          "stat": "SHIP",
-          "detailLead": "这是出货与联动的临时详细说明。正式公开时将刊登出货准备、运输和相关合作内容。",
-          "detailItems": [
-            "出货准备流程",
-            "运输概要",
-            "相关方联动"
-          ],
-          "id": "shipment"
-        }
-      ],
-      "detailTitle": "详细信息"
+    "messageText": {
+      "ja": "平素より格別のご高配を賜り、誠にありがとうございます。当社は、資源を大切に扱い、関係者の皆さまに安心してご確認いただける情報発信を心がけております。今後も誠実な姿勢を大切にし、地域社会と取引先の皆さまに信頼される企業を目指してまいります。",
+      "zh": "感谢各位一直以来的支持。本公司重视资源的合理利用，并努力提供便于相关人员确认的信息。今后也将保持诚信的态度，努力成为让客户和地区社会信赖的企业。",
+      "en": "Thank you for your continued support. We value the careful use of resources and aim to provide information that stakeholders can review with confidence. We will continue to act with sincerity and strive to be a company trusted by customers and the local community."
     },
-    "contact": {
-      "metaTitle": "联系方式｜株式会社 吉源商事",
-      "pageKicker": "CONTACT",
-      "pageTitle": "联系方式",
-      "pageLead": "此页面用于确认公开联系方式、地址和银行账户信息。",
-      "contactTitle": "公开联系方式",
-      "bankTitle": "银行账户信息",
-      "bankNote": "以下为临时信息，正式公开时请替换为正确信息。",
-      "contactRows": [
-        {
-          "label": "公司名称",
-          "value": "株式会社 吉源商事"
+    "outlineTitle": {
+      "ja": "会社概要",
+      "zh": "公司概要",
+      "en": "Company Profile"
+    },
+    "philosophyTitle": {
+      "ja": "大切にしている姿勢",
+      "zh": "我们的重视事项",
+      "en": "Our Principles"
+    },
+    "outline": [
+      {
+        "label": {
+          "ja": "会社名",
+          "zh": "公司名称",
+          "en": "Company"
         },
-        {
-          "label": "电话",
-          "value": "000-0000-0000"
-        },
-        {
-          "label": "邮箱",
-          "value": "info@example.com"
-        },
-        {
-          "label": "地址",
-          "value": "千叶县佐仓市坂户1371-1"
+        "value": {
+          "ja": "株式会社 吉源商事",
+          "zh": "株式会社 吉源商事",
+          "en": "Yoshigen Shoji Co., Ltd."
         }
-      ],
-      "bankRows": [
-        {
-          "label": "银行名",
-          "value": "〇〇银行"
+      },
+      {
+        "label": {
+          "ja": "事業内容",
+          "zh": "业务内容",
+          "en": "Business"
         },
-        {
-          "label": "支店名",
-          "value": "〇〇支店"
-        },
-        {
-          "label": "账户类型",
-          "value": "普通"
-        },
-        {
-          "label": "账号",
-          "value": "0000000"
-        },
-        {
-          "label": "账户名义",
-          "value": "株式会社 吉源商事"
+        "value": {
+          "ja": "金属資源に関する買取、選別、保管、出荷など",
+          "zh": "金属资源相关的收购、分选、保管、出货等",
+          "en": "Metal resource purchasing, sorting, storage, and shipment"
         }
-      ],
-      "mapTitle": "交通位置",
-      "mapText": "可在地图中确认所在地。来访前请通过公开联系方式提前确认。",
-      "mapAddress": "千叶县佐仓市坂户1371-1"
+      },
+      {
+        "label": {
+          "ja": "取扱品目",
+          "zh": "经营品类",
+          "en": "Products"
+        },
+        "value": {
+          "ja": "鉄、非鉄金属、線材、機械類など",
+          "zh": "铁、有色金属、线材、机械类等",
+          "en": "Ferrous metals, non-ferrous metals, wires, machinery, and related items"
+        }
+      },
+      {
+        "label": {
+          "ja": "本社住所",
+          "zh": "本社地址",
+          "en": "Address"
+        },
+        "value": {
+          "ja": "千叶县佐仓市坂户1371-1",
+          "zh": "千叶县佐仓市坂户1371-1",
+          "en": "1371-1 Sakado, Sakura-shi, Chiba, Japan"
+        }
+      },
+      {
+        "label": {
+          "ja": "作业场地住所",
+          "zh": "ヤード地址",
+          "en": "YardAddress"
+        },
+        "value": {
+          "ja": "千叶县佐仓市坂户1371-1",
+          "zh": "千叶县佐仓市坂户1371-1",
+          "en": "1371-1 Sakado, Sakura-shi, Chiba, Japan"
+        }
+      },
+      {
+        "label": {
+          "ja": "代表者",
+          "zh": "代表者",
+          "en": "Representative"
+        },
+        "value": {
+          "ja": "代表者名を掲載予定",
+          "zh": "代表者姓名预定刊登",
+          "en": "Representative name to be added"
+        }
+      }
+    ],
+    "philosophy": [
+      {
+        "title": {
+          "ja": "分かりやすい情報",
+          "zh": "清晰的信息",
+          "en": "Clear Information"
+        },
+        "text": {
+          "ja": "外部の方が確認しやすいよう、情報を整理して掲載します。",
+          "zh": "整理并刊登便于外部人员确认的信息。",
+          "en": "We organize information so external visitors can review it easily."
+        }
+      },
+      {
+        "title": {
+          "ja": "誠実な対応",
+          "zh": "诚信的态度",
+          "en": "Sincere Attitude"
+        },
+        "text": {
+          "ja": "関係者の皆さまに安心していただける姿勢を大切にします。",
+          "zh": "重视让相关人员安心的对应方式。",
+          "en": "We value communication that gives stakeholders confidence."
+        }
+      },
+      {
+        "title": {
+          "ja": "継続的な改善",
+          "zh": "持续改进",
+          "en": "Continuous Improvement"
+        },
+        "text": {
+          "ja": "写真、文章、情報を必要に応じて更新していきます。",
+          "zh": "根据需要更新照片、文字和信息。",
+          "en": "Photos, copy, and information will be updated as needed."
+        }
+      }
+    ],
+    "messageSignature": {
+      "ja": "代表取締役　李光林",
+      "zh": "代表董事　李广林",
+      "en": "Representative Director - LI GUANG LIN"
     }
   },
-  "en": {
-    "common": {
-      "companyName": "Yoshigen Shoji Co., Ltd.",
-      "tagline": "A metal recycling partner connecting resource circulation and global distribution",
-      "nav": {
-        "home": "Home",
-        "company": "Company",
-        "products": "Products",
-        "facilities": "Facilities",
-        "contact": "Contact"
+  "products": {
+    "metaTitle": {
+      "ja": "取扱商品｜株式会社 吉源商事",
+      "zh": "经营品类｜株式会社 吉源商事",
+      "en": "Products | Yoshigen Shoji Co., Ltd."
+    },
+    "pageKicker": "PRODUCTS",
+    "pageTitle": {
+      "ja": "取扱商品",
+      "zh": "经营品类",
+      "en": "Products"
+    },
+    "pageLead": {
+      "ja": "取扱品目の概要を一覧で確認できるページです。正式写真と説明文は順次差し替え予定です。",
+      "zh": "此页面用于以列表形式介绍经营品类概要。正式照片和说明将陆续替换。",
+      "en": "This page lists an overview of product categories. Official photos and descriptions will be replaced gradually."
+    },
+    "groups": [
+      {
+        "id": "ferrous-metals",
+        "title": {
+          "ja": "鉄系金属",
+          "zh": "铁系金属",
+          "en": "Ferrous Metals"
+        },
+        "itemIds": [
+          "steel",
+          "stainless",
+          "demolition-metal"
+        ]
       },
-      "language": "Language",
-      "footerLead": "This website presents resource circulation business information, product categories, facilities, and contact details clearly.",
-      "footerNote": "This is a draft before official release. Text, photos, and company details will be replaced as needed.",
-      "copyright": "© 2026 Yoshigen Shoji Co., Ltd. All Rights Reserved.",
-      "viewMore": "View more",
-      "relatedTitle": "Related Pages",
-      "ctaTitle": "Business and Product Information",
-      "ctaText": "Please review the public information and use the listed contact details when needed.",
-      "ctaButton": "View Contact Information"
+      {
+        "id": "non-ferrous-metals",
+        "title": {
+          "ja": "非鉄金属",
+          "zh": "有色金属",
+          "en": "Non-Ferrous Metals"
+        },
+        "itemIds": [
+          "copper",
+          "aluminum",
+          "brass",
+          "wire"
+        ]
+      },
+      {
+        "id": "machinery-equipment",
+        "title": {
+          "ja": "機械・設備",
+          "zh": "机械与设备",
+          "en": "Machinery & Equipment"
+        },
+        "itemIds": [
+          "motor",
+          "machinery"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "title": {
+          "ja": "鉄スクラップ",
+          "zh": "铁废料",
+          "en": "Steel Scrap"
+        },
+        "category": "Ferrous",
+        "text": {
+          "ja": "建築、工場、解体現場などから発生する鉄系スクラップを取り扱います。",
+          "zh": "经营建筑、工厂、拆解现场等产生的铁类废料。",
+          "en": "Steel scrap generated from construction, factories, and demolition sites."
+        },
+        "id": "steel"
+      },
+      {
+        "title": {
+          "ja": "銅",
+          "zh": "铜",
+          "en": "Copper"
+        },
+        "category": "Copper",
+        "text": {
+          "ja": "銅線、銅材、銅屑など、再資源化価値の高い非鉄金属を扱います。",
+          "zh": "经营铜线、铜材、铜屑等再资源化价值较高的有色金属。",
+          "en": "Copper wire, copper material, and copper scrap with high recycling value."
+        },
+        "id": "copper"
+      },
+      {
+        "title": {
+          "ja": "アルミ",
+          "zh": "铝",
+          "en": "Aluminum"
+        },
+        "category": "Aluminum",
+        "text": {
+          "ja": "アルミサッシ、アルミ材、機械部品などを状態に応じて確認します。",
+          "zh": "根据状态确认铝窗框、铝材、机械部件等。",
+          "en": "Aluminum sash, materials, and machinery parts reviewed by condition."
+        },
+        "id": "aluminum"
+      },
+      {
+        "title": {
+          "ja": "ステンレス",
+          "zh": "不锈钢",
+          "en": "Stainless Steel"
+        },
+        "category": "Stainless",
+        "text": {
+          "ja": "耐食性を持つステンレス材を種類ごとに整理し、出荷します。",
+          "zh": "按种类整理耐腐蚀的不锈钢材料并出货。",
+          "en": "Stainless materials sorted by type for shipment."
+        },
+        "id": "stainless"
+      },
+      {
+        "title": {
+          "ja": "真鍮",
+          "zh": "黄铜",
+          "en": "Brass"
+        },
+        "category": "Brass",
+        "text": {
+          "ja": "真鍮部品、バルブ、金具類などを取り扱います。",
+          "zh": "经营黄铜部件、阀门、金属配件等。",
+          "en": "Brass parts, valves, fittings, and related materials."
+        },
+        "id": "brass"
+      },
+      {
+        "title": {
+          "ja": "雑線",
+          "zh": "电线",
+          "en": "Wire"
+        },
+        "category": "Wire",
+        "text": {
+          "ja": "各種電線、ケーブル類を素材・状態に合わせて確認します。",
+          "zh": "确认各种电线、电缆的材料和状态。",
+          "en": "Various wires and cables reviewed by material and condition."
+        },
+        "id": "wire"
+      },
+      {
+        "title": {
+          "ja": "モーター",
+          "zh": "马达",
+          "en": "Motors"
+        },
+        "category": "Motor",
+        "text": {
+          "ja": "工場設備や機械から発生するモーター類を取り扱います。",
+          "zh": "经营工厂设备和机械中产生的马达类。",
+          "en": "Motors generated from factory equipment and machinery."
+        },
+        "id": "motor"
+      },
+      {
+        "title": {
+          "ja": "工業機械",
+          "zh": "工业机械",
+          "en": "Industrial Machinery"
+        },
+        "category": "Machinery",
+        "text": {
+          "ja": "使用済み機械、設備部材などを個別条件に応じて相談できます。",
+          "zh": "旧机械、设备部材等可按个别条件咨询。",
+          "en": "Used machinery and equipment materials reviewed by individual conditions."
+        },
+        "id": "machinery"
+      },
+      {
+        "title": {
+          "ja": "解体金属",
+          "zh": "拆解金属",
+          "en": "Demolition Metals"
+        },
+        "category": "Demolition",
+        "text": {
+          "ja": "解体現場から発生する金属資源の確認、整理、出荷に対応します。",
+          "zh": "对应拆解现场产生的金属资源确认、整理和出货。",
+          "en": "Metal resources generated from demolition sites, organized and shipped as required."
+        },
+        "id": "demolition-metal"
+      }
+    ]
+  },
+  "facilities": {
+    "metaTitle": {
+      "ja": "設備・実例｜株式会社 吉源商事",
+      "zh": "设备与案例｜株式会社 吉源商事",
+      "en": "Facilities | Yoshigen Shoji Co., Ltd."
     },
-    "home": {
-      "metaTitle": "Yoshigen Shoji Co., Ltd. | Metal Recycling and Resource Circulation",
-      "heroKicker": "GREEN RESOURCE CIRCULATION",
-      "heroTitle": "Carrying Resources Forward.",
-      "heroLead": "We purchase, sort, store, and ship metal scrap to support the reuse of metal resources.",
-      "heroPrimary": "View Products",
-      "heroSecondary": "Company Profile",
-      "servicesTitle": "Core Services",
-      "productsTitle": "Product Categories",
-            "news": [
-              { "date": "2026.09.27", "text": "The official Yoshigen Shoji website is now live." },
-              { "date": "2026.09.27", "text": "We welcome inquiries about scrap metal purchasing and business transactions." }
+    "pageKicker": "FACILITIES",
+    "pageTitle": {
+      "ja": "設備・実例",
+      "zh": "设备与案例",
+      "en": "Facilities and Cases"
+    },
+    "pageLead": {
+      "ja": "設備、作業環境、実例写真などを紹介するためのページです。",
+      "zh": "此页面用于介绍设备、作业环境和案例照片。",
+      "en": "This page introduces facilities, work environments, and example photos."
+    },
+    "cases": [
+      {
+        "title": {
+          "ja": "設備・ヤード",
+          "zh": "设备与场地",
+          "en": "Facilities and Yard"
+        },
+        "text": {
+          "ja": "保管場所や作業環境の概要を、写真と合わせて掲載します。",
+          "zh": "结合照片介绍保管场地和作业环境概要。",
+          "en": "Storage areas and work environments are introduced with photos."
+        },
+        "stat": "ヤード",
+        "details": [
+          {
+            "id": "detail1",
+            "title": {
+              "ja": "詳細 1",
+              "zh": "详情 1",
+              "en": "Detail 1"
+            },
+            "text": {
+              "ja": "設備・ヤードに関する仮の詳細説明です。正式公開時には、敷地、保管場所、作業導線、設備写真などを掲載します。",
+              "zh": "这是设备与场地的临时详细说明。正式公开时将刊登场地、保管区域、作业动线和设备照片。",
+              "en": "This is placeholder detail copy for facilities and yards. Official content can include site layout, storage areas, workflow, and facility photos."
+            },
+            "items": [
+              {
+                "ja": "保管場所の概要",
+                "zh": "保管区域概要",
+                "en": "Storage area overview"
+              },
+              {
+                "ja": "作業環境の紹介",
+                "zh": "作业环境介绍",
+                "en": "Work environment introduction"
+              },
+              {
+                "ja": "安全管理に関する説明",
+                "zh": "安全管理说明",
+                "en": "Safety management notes"
+              }
             ],
-      "stats": [
-        {
-          "number": "6",
-          "suffix": "page",
-          "label": "外部向け情報"
+            "imageId": "yard"
+          },
+          {
+            "id": "detail2",
+            "title": {
+              "ja": "詳細 2",
+              "zh": "详情 2",
+              "en": "Detail 2"
+            },
+            "text": {
+              "ja": "設備・ヤードの仮内容 2 です。",
+              "zh": "这是设备与场地的临时内容 2。",
+              "en": "This is placeholder content 2 for Facilities and Yard."
+            },
+            "items": [],
+            "imageId": "yard"
+          },
+          {
+            "id": "detail3",
+            "title": {
+              "ja": "詳細 3",
+              "zh": "详情 3",
+              "en": "Detail 3"
+            },
+            "text": {
+              "ja": "設備・ヤードの仮内容 3 です。",
+              "zh": "这是设备与场地的临时内容 3。",
+              "en": "This is placeholder content 3 for Facilities and Yard."
+            },
+            "items": [],
+            "imageId": "yard"
+          },
+          {
+            "id": "detail4",
+            "title": {
+              "ja": "詳細 4",
+              "zh": "详情 4",
+              "en": "Detail 4"
+            },
+            "text": {
+              "ja": "設備・ヤードの仮内容 4 です。",
+              "zh": "这是设备与场地的临时内容 4。",
+              "en": "This is placeholder content 4 for Facilities and Yard."
+            },
+            "items": [],
+            "imageId": "yard"
+          }
+        ],
+        "id": "yard"
+      },
+      {
+        "title": {
+          "ja": "事務所展示",
+          "zh": "事務所展示",
+          "en": "Office Display"
         },
-        {
-          "number": "3",
-          "suffix": "lang",
-          "label": "日本語・中国語・英語"
+        "text": {
+          "ja": "本社事務所の展示と紹介",
+          "zh": "介绍本社事務所的展示",
+          "en": "Introduction to the main office display"
         },
-        {
-          "number": "9",
-          "suffix": "types",
-          "label": "主要取扱品目"
-        }
-      ],
-      "services": [
-        {
-          "title": "Purchasing and Sorting",
-          "text": "We assess metal scrap by type and condition, then sort it accordingly.",
-          "link": "facilities.html"
+        "stat": "本社事務所",
+        "details": [
+          {
+            "id": "detail1",
+            "title": {
+              "ja": "詳細 1",
+              "zh": "详情 1",
+              "en": "Detail 1"
+            },
+            "text": {
+              "ja": "事務所展示に関する仮の詳細説明です。正式公開時には、本社事務所の展示内容や写真を掲載します。",
+              "zh": "这是事务所展示的临时详细说明。正式公开时将刊登本社事务所的展示内容和照片。",
+              "en": "This is placeholder detail copy for the office display. Official content can include the main office display content and photos."
+            },
+            "items": [
+              {
+                "ja": "品目別の整理",
+                "zh": "按品类整理",
+                "en": "Category-based sorting"
+              },
+              {
+                "ja": "保管状態の確認",
+                "zh": "保管状态确认",
+                "en": "Storage condition review"
+              },
+              {
+                "ja": "管理体制の紹介",
+                "zh": "管理体制介绍",
+                "en": "Management system overview"
+              }
+            ],
+            "imageId": "sorting"
+          },
+          {
+            "id": "detail2",
+            "title": {
+              "ja": "詳細 2",
+              "zh": "详情 2",
+              "en": "Detail 2"
+            },
+            "text": {
+              "ja": "事務所展示の仮内容 2 です。",
+              "zh": "这是事務所展示的临时内容 2。",
+              "en": "This is placeholder content 2 for Office Display."
+            },
+            "items": [],
+            "imageId": "sorting"
+          },
+          {
+            "id": "detail3",
+            "title": {
+              "ja": "詳細 3",
+              "zh": "详情 3",
+              "en": "Detail 3"
+            },
+            "text": {
+              "ja": "事務所展示の仮内容 3 です。",
+              "zh": "这是事務所展示的临时内容 3。",
+              "en": "This is placeholder content 3 for Office Display."
+            },
+            "items": [],
+            "imageId": "sorting"
+          },
+          {
+            "id": "detail4",
+            "title": {
+              "ja": "詳細 4",
+              "zh": "详情 4",
+              "en": "Detail 4"
+            },
+            "text": {
+              "ja": "事務所展示の仮内容 4 です。",
+              "zh": "这是事務所展示的临时内容 4。",
+              "en": "This is placeholder content 4 for Office Display."
+            },
+            "items": [],
+            "imageId": "sorting"
+          }
+        ],
+        "id": "sorting"
+      },
+      {
+        "title": {
+          "ja": "出荷・連携",
+          "zh": "出货与联动",
+          "en": "Shipment and Coordination"
         },
-        {
-          "title": "Storage and Shipment",
-          "text": "We store resources appropriately and arrange shipments in Japan and overseas.",
-          "link": "facilities.html"
+        "text": {
+          "ja": "出荷や関連作業の流れを、分かりやすく紹介します。",
+          "zh": "以清晰方式介绍出货和相关作业流程。",
+          "en": "Shipment and related work flows are introduced clearly."
         },
-        {
-          "title": "Metal Scrap Categories",
-          "text": "We handle a range of metal scrap, including steel, copper, and aluminum.",
-          "link": "products.html"
-        }
-      ]
+        "stat": "出荷実績",
+        "details": [
+          {
+            "id": "detail1",
+            "title": {
+              "ja": "詳細 1",
+              "zh": "详情 1",
+              "en": "Detail 1"
+            },
+            "text": {
+              "ja": "出荷・連携に関する仮の詳細説明です。正式公開時には、出荷準備、輸送、関係先との連携内容を掲載します。",
+              "zh": "这是出货与联动的临时详细说明。正式公开时将刊登出货准备、运输和相关合作内容。",
+              "en": "This is placeholder detail copy for shipment and coordination. Official content can include shipment preparation, transport, and partner coordination."
+            },
+            "items": [
+              {
+                "ja": "出荷準備の流れ",
+                "zh": "出货准备流程",
+                "en": "Shipment preparation flow"
+              },
+              {
+                "ja": "輸送に関する概要",
+                "zh": "运输概要",
+                "en": "Transport overview"
+              },
+              {
+                "ja": "関係先との連携",
+                "zh": "相关方联动",
+                "en": "Partner coordination"
+              }
+            ],
+            "imageId": "shipment"
+          },
+          {
+            "id": "detail2",
+            "title": {
+              "ja": "詳細 2",
+              "zh": "详情 2",
+              "en": "Detail 2"
+            },
+            "text": {
+              "ja": "出荷・連携の仮内容 2 です。",
+              "zh": "这是出货与联动的临时内容 2。",
+              "en": "This is placeholder content 2 for Shipment and Coordination."
+            },
+            "items": [],
+            "imageId": "shipment"
+          },
+          {
+            "id": "detail3",
+            "title": {
+              "ja": "詳細 3",
+              "zh": "详情 3",
+              "en": "Detail 3"
+            },
+            "text": {
+              "ja": "出荷・連携の仮内容 3 です。",
+              "zh": "这是出货与联动的临时内容 3。",
+              "en": "This is placeholder content 3 for Shipment and Coordination."
+            },
+            "items": [],
+            "imageId": "shipment"
+          },
+          {
+            "id": "detail4",
+            "title": {
+              "ja": "詳細 4",
+              "zh": "详情 4",
+              "en": "Detail 4"
+            },
+            "text": {
+              "ja": "出荷・連携の仮内容 4 です。",
+              "zh": "这是出货与联动的临时内容 4。",
+              "en": "This is placeholder content 4 for Shipment and Coordination."
+            },
+            "items": [],
+            "imageId": "shipment"
+          }
+        ],
+        "id": "shipment"
+      }
+    ]
+  },
+  "contact": {
+    "metaTitle": {
+      "ja": "お問い合わせ｜株式会社 吉源商事",
+      "zh": "联系方式｜株式会社 吉源商事",
+      "en": "Contact | Yoshigen Shoji Co., Ltd."
     },
-    "company": {
-      "metaTitle": "Company | Yoshigen Shoji Co., Ltd.",
-      "pageKicker": "COMPANY",
-      "pageTitle": "Company",
-      "pageLead": "Basic company information, representative message, and business principles are listed here.",
-      "messageTitle": "President Message",
-      "messageText": "Thank you for your continued support. We value the careful use of resources and aim to provide information that stakeholders can review with confidence. We will continue to act with sincerity and strive to be a company trusted by customers and the local community.",
-      "outlineTitle": "Company Profile",
-      "philosophyTitle": "Our Principles",
-      "outline": [
-        {
-          "label": "Company",
-          "value": "Yoshigen Shoji Co., Ltd."
-        },
-        {
-          "label": "Business",
-          "value": "Metal resource purchasing, sorting, storage, and shipment"
-        },
-        {
-          "label": "Products",
-          "value": "Ferrous metals, non-ferrous metals, wires, machinery, and related items"
-        },
-        {
-          "label": "Address",
-          "value": "1371-1 Sakado, Sakura-shi, Chiba, Japan"
-        },
-        {
-          "label": "Representative",
-          "value": "Representative name to be added"
-        }
-      ],
-      "philosophy": [
-        {
-          "title": "Clear Information",
-          "text": "We organize information so external visitors can review it easily."
-        },
-        {
-          "title": "Sincere Attitude",
-          "text": "We value communication that gives stakeholders confidence."
-        },
-        {
-          "title": "Continuous Improvement",
-          "text": "Photos, copy, and information will be updated as needed."
-        }
-      ],
-      "messageSignature": "Representative Director - Name to be added"
+    "pageKicker": "CONTACT",
+    "pageTitle": {
+      "ja": "お問い合わせ情報",
+      "zh": "联系方式",
+      "en": "Contact Information"
     },
-    "products": {
-      "metaTitle": "Products | Yoshigen Shoji Co., Ltd.",
-      "pageKicker": "PRODUCTS",
-      "pageTitle": "Products",
-      "pageLead": "This page lists an overview of product categories. Official photos and descriptions will be replaced gradually.",
-      "items": [
-        {
-          "title": "Steel Scrap",
-          "category": "Ferrous",
-          "text": "Steel scrap generated from construction, factories, and demolition sites.",
-          "id": "steel"
-        },
-        {
-          "title": "Copper",
-          "category": "Copper",
-          "text": "Copper wire, copper material, and copper scrap with high recycling value.",
-          "id": "copper"
-        },
-        {
-          "title": "Aluminum",
-          "category": "Aluminum",
-          "text": "Aluminum sash, materials, and machinery parts reviewed by condition.",
-          "id": "aluminum"
-        },
-        {
-          "title": "Stainless Steel",
-          "category": "Stainless",
-          "text": "Stainless materials sorted by type for shipment.",
-          "id": "stainless"
-        },
-        {
-          "title": "Brass",
-          "category": "Brass",
-          "text": "Brass parts, valves, fittings, and related materials.",
-          "id": "brass"
-        },
-        {
-          "title": "Wire",
-          "category": "Wire",
-          "text": "Various wires and cables reviewed by material and condition.",
-          "id": "wire"
-        },
-        {
-          "title": "Motors",
-          "category": "Motor",
-          "text": "Motors generated from factory equipment and machinery.",
-          "id": "motor"
-        },
-        {
-          "title": "Industrial Machinery",
-          "category": "Machinery",
-          "text": "Used machinery and equipment materials reviewed by individual conditions.",
-          "id": "machinery"
-        },
-        {
-          "title": "Demolition Metals",
-          "category": "Demolition",
-          "text": "Metal resources generated from demolition sites, organized and shipped as required.",
-          "id": "demolition-metal"
-        }
-      ]
+    "pageLead": {
+      "ja": "公開連絡先、所在地、銀行口座情報などを確認できるページです。",
+      "zh": "此页面用于确认公开联系方式、地址和银行账户信息。",
+      "en": "Public contact details, address, and bank account information can be reviewed here."
     },
-    "facilities": {
-      "metaTitle": "Facilities | Yoshigen Shoji Co., Ltd.",
-      "pageKicker": "FACILITIES",
-      "pageTitle": "Facilities and Cases",
-      "pageLead": "This page introduces facilities, work environments, and example photos.",
-      "cases": [
-        {
-          "title": "Facilities and Yard",
-          "text": "Storage areas and work environments are introduced with photos.",
-          "stat": "YARD",
-          "detailLead": "This is placeholder detail copy for facilities and yards. Official content can include site layout, storage areas, workflow, and facility photos.",
-          "detailItems": [
-            "Storage area overview",
-            "Work environment introduction",
-            "Safety management notes"
-          ],
-          "id": "yard"
-        },
-        {
-          "title": "Sorting and Management",
-          "text": "Information about category-based sorting and management is listed.",
-          "stat": "SORT",
-          "detailLead": "This is placeholder detail copy for sorting and management. Official content can include sorting methods, category handling, and management photos.",
-          "detailItems": [
-            "Category-based sorting",
-            "Storage condition review",
-            "Management system overview"
-          ],
-          "id": "sorting"
-        },
-        {
-          "title": "Shipment and Coordination",
-          "text": "Shipment and related work flows are introduced clearly.",
-          "stat": "SHIP",
-          "detailLead": "This is placeholder detail copy for shipment and coordination. Official content can include shipment preparation, transport, and partner coordination.",
-          "detailItems": [
-            "Shipment preparation flow",
-            "Transport overview",
-            "Partner coordination"
-          ],
-          "id": "shipment"
-        }
-      ],
-      "detailTitle": "Details"
+    "contactTitle": {
+      "ja": "公開連絡先",
+      "zh": "公开联系方式",
+      "en": "Public Contact"
     },
-    "contact": {
-      "metaTitle": "Contact | Yoshigen Shoji Co., Ltd.",
-      "pageKicker": "CONTACT",
-      "pageTitle": "Contact Information",
-      "pageLead": "Public contact details, address, and bank account information can be reviewed here.",
-      "contactTitle": "Public Contact",
-      "bankTitle": "Bank Account Information",
-      "bankNote": "The following information is temporary. Replace it with correct details before official release.",
-      "contactRows": [
-        {
-          "label": "Company",
-          "value": "Yoshigen Shoji Co., Ltd."
+    "bankTitle": {
+      "ja": "銀行口座情報",
+      "zh": "银行账户信息",
+      "en": "Bank Account Information"
+    },
+    "bankNote": {
+      "ja": "以下は仮情報です。正式公開時に正しい情報へ差し替えてください。",
+      "zh": "以下为临时信息，正式公开时请替换为正确信息。",
+      "en": "The following information is temporary. Replace it with correct details before official release."
+    },
+    "contactRows": [
+      {
+        "label": {
+          "ja": "会社名",
+          "zh": "公司名称",
+          "en": "Company"
         },
-        {
-          "label": "Phone",
-          "value": "000-0000-0000"
-        },
-        {
-          "label": "Email",
-          "value": "info@example.com"
-        },
-        {
-          "label": "Address",
-          "value": "1371-1 Sakado, Sakura-shi, Chiba, Japan"
+        "value": {
+          "ja": "株式会社 吉源商事",
+          "zh": "株式会社 吉源商事",
+          "en": "Yoshigen Shoji Co., Ltd."
         }
-      ],
-      "bankRows": [
-        {
-          "label": "Bank",
-          "value": "Sample Bank"
+      },
+      {
+        "label": {
+          "ja": "電話番号",
+          "zh": "电话",
+          "en": "Phone"
         },
-        {
-          "label": "Branch",
-          "value": "Sample Branch"
+        "value": "000-0000-0000"
+      },
+      {
+        "label": {
+          "ja": "メール",
+          "zh": "邮箱",
+          "en": "Email"
         },
-        {
-          "label": "Account Type",
-          "value": "Ordinary"
+        "value": "info@example.com"
+      },
+      {
+        "label": {
+          "ja": "所在地",
+          "zh": "地址",
+          "en": "Address"
         },
-        {
-          "label": "Account No.",
-          "value": "0000000"
-        },
-        {
-          "label": "Account Name",
-          "value": "Yoshigen Shoji Co., Ltd."
+        "value": {
+          "ja": "千葉県佐倉市坂戸1371-1",
+          "zh": "千叶县佐仓市坂户1371-1",
+          "en": "1371-1 Sakado, Sakura-shi, Chiba, Japan"
         }
-      ],
-      "mapTitle": "Access",
-      "mapText": "The company location can be checked on the map. Please confirm by public contact details before visiting.",
-      "mapAddress": "1371-1 Sakado, Sakura-shi, Chiba, Japan"
+      }
+    ],
+    "bankRows": [
+      {
+        "label": {
+          "ja": "銀行名",
+          "zh": "银行名",
+          "en": "Bank"
+        },
+        "value": {
+          "ja": "〇〇銀行",
+          "zh": "〇〇银行",
+          "en": "Sample Bank"
+        }
+      },
+      {
+        "label": {
+          "ja": "支店名",
+          "zh": "支店名",
+          "en": "Branch"
+        },
+        "value": {
+          "ja": "〇〇支店",
+          "zh": "〇〇支店",
+          "en": "Sample Branch"
+        }
+      },
+      {
+        "label": {
+          "ja": "口座種別",
+          "zh": "账户类型",
+          "en": "Account Type"
+        },
+        "value": {
+          "ja": "普通",
+          "zh": "普通",
+          "en": "Ordinary"
+        }
+      },
+      {
+        "label": {
+          "ja": "口座番号",
+          "zh": "账号",
+          "en": "Account No."
+        },
+        "value": "0000000"
+      },
+      {
+        "label": {
+          "ja": "口座名義",
+          "zh": "账户名义",
+          "en": "Account Name"
+        },
+        "value": {
+          "ja": "株式会社 吉源商事",
+          "zh": "株式会社 吉源商事",
+          "en": "Yoshigen Shoji Co., Ltd."
+        }
+      }
+    ],
+    "mapTitle": {
+      "ja": "アクセス",
+      "zh": "交通位置",
+      "en": "Access"
+    },
+    "mapText": {
+      "ja": "所在地を地図で確認できます。ご来訪の際は、事前に公開連絡先よりご確認ください。",
+      "zh": "可在地图中确认所在地。来访前请通过公开联系方式提前确认。",
+      "en": "The company location can be checked on the map. Please confirm by public contact details before visiting."
+    },
+    "mapAddress": {
+      "ja": "千葉県佐倉市坂戸1371-1",
+      "zh": "千叶县佐仓市坂户1371-1",
+      "en": "1371-1 Sakado, Sakura-shi, Chiba, Japan"
     }
   }
 }
