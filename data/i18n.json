@@ -281,8 +281,8 @@
       },
       {
         "label": {
-          "ja": "作业场地住所",
-          "zh": "ヤード地址",
+          "ja": "ヤード地址",
+          "zh": "作业场地地址",
           "en": "YardAddress"
         },
         "value": {
@@ -298,9 +298,9 @@
           "en": "Representative"
         },
         "value": {
-          "ja": "代表者名を掲載予定",
-          "zh": "代表者姓名预定刊登",
-          "en": "Representative name to be added"
+          "ja": "李広林",
+          "zh": "李广林",
+          "en": "LI GUANG LIN"
         }
       }
     ],
