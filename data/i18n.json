@@ -647,14 +647,14 @@
       },
       {
         "title": {
-          "ja": "事務所展示",
-          "zh": "事務所展示",
-          "en": "Office Display"
+          "ja": "過去実例",
+          "zh": "过去实例",
+          "en": "Past Examples"
         },
         "text": {
-          "ja": "本社事務所の展示と紹介",
-          "zh": "介绍本社事務所的展示",
-          "en": "Introduction to the main office display"
+          "ja": "本社過去のの担当した案件や、作業の様子を写真で紹介します。",
+          "zh": "以照片介绍本社过去处理的案件和作业情况。",
+          "en": "Introduction to past projects and work processes"
         },
         "stat": "本社事務所",
         "details": [
@@ -666,9 +666,9 @@
               "en": "Detail 1"
             },
             "text": {
-              "ja": "事務所展示に関する仮の詳細説明です。正式公開時には、本社事務所の展示内容や写真を掲載します。",
-              "zh": "这是事务所展示的临时详细说明。正式公开时将刊登本社事务所的展示内容和照片。",
-              "en": "This is placeholder detail copy for the office display. Official content can include the main office display content and photos."
+              "ja": "過去実例に関する仮の詳細説明です。正式公開時には、本社過去の案件や作業の様子を写真で掲載します。",
+              "zh": "这是过去实例的临时详细说明。正式公开时将刊登本社过去处理的案件和作业情况。",
+              "en": "This is placeholder detail copy for past examples. Official content can include photos of past projects and work processes."
             },
             "items": [
               {
@@ -697,9 +697,9 @@
               "en": "Detail 2"
             },
             "text": {
-              "ja": "事務所展示の仮内容 2 です。",
-              "zh": "这是事務所展示的临时内容 2。",
-              "en": "This is placeholder content 2 for Office Display."
+              "ja": "過去実例の仮内容 2 です。",
+              "zh": "这是过去实例的临时内容 2。",
+              "en": "This is placeholder content 2 for Past Examples."
             },
             "items": [],
             "imageId": "sorting"
@@ -712,9 +712,9 @@
               "en": "Detail 3"
             },
             "text": {
-              "ja": "事務所展示の仮内容 3 です。",
-              "zh": "这是事務所展示的临时内容 3。",
-              "en": "This is placeholder content 3 for Office Display."
+              "ja": "過去実例の仮内容 3 です。",
+              "zh": "这是过去实例的临时内容 3。",
+              "en": "This is placeholder content 3 for Past Examples."
             },
             "items": [],
             "imageId": "sorting"
@@ -727,9 +727,9 @@
               "en": "Detail 4"
             },
             "text": {
-              "ja": "事務所展示の仮内容 4 です。",
-              "zh": "这是事務所展示的临时内容 4。",
-              "en": "This is placeholder content 4 for Office Display."
+              "ja": "過去実例の仮内容 4 です。",
+              "zh": "这是过去实例的临时内容 4。",
+              "en": "This is placeholder content 4 for Past Examples."
             },
             "items": [],
             "imageId": "sorting"
