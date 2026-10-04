@@ -14,6 +14,15 @@
         '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
     })[char]);
 
+    function assetURL(path) {
+        if (!path) return '';
+        try {
+            return new URL(path, document.baseURI).href;
+        } catch (_) {
+            return path;
+        }
+    }
+
     function getValue(source, path) {
         return path.split('.').reduce((value, key) => value && value[key], source);
     }
@@ -95,9 +104,9 @@
 
     function renderCases(target, items, images) {
         if (!target || !Array.isArray(items)) return;
-        target.innerHTML = items.map((item) => {
-            const image = images[item.id] || '';
-            return `<a class="case-card tilt-card" data-animate href="#facility-${escapeHTML(item.id)}" style="--case-bg:url('${escapeHTML(image)}')"><div class="case-stat">${escapeHTML(item.stat)}</div><div><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></a>`;
+        target.innerHTML = items.map((item, index) => {
+            const image = assetURL(images[item.id]);
+            return `<a class="case-card tilt-card" data-animate href="#facility-detail-${index + 1}" style="--case-bg:url('${escapeHTML(image)}')"><div class="case-stat">${escapeHTML(item.stat)}</div><div><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></a>`;
         }).join('');
     }
 
@@ -116,6 +125,46 @@
         }).join('');
     }
 
+    function renderProductFiltersV2(target, groups, lang) {
+        if (!target || !Array.isArray(groups)) return;
+        const allLabels = { ja: '\u3059\u3079\u3066', zh: '\u5168\u90e8', en: 'All' };
+        const filters = [{ id: 'all', title: allLabels[lang] || allLabels.ja }, ...groups];
+        target.innerHTML = filters.map((filter, index) => `<button type="button" data-filter="${escapeHTML(filter.id)}" aria-pressed="${index === 0}">${escapeHTML(filter.title)}</button>`).join('');
+        target.onclick = (event) => {
+            const button = event.target.closest('button[data-filter]');
+            if (!button) return;
+            target.querySelectorAll('button').forEach((node) => node.setAttribute('aria-pressed', String(node === button)));
+            document.querySelectorAll('[data-render="products"] .product-card').forEach((card) => {
+                card.hidden = button.dataset.filter !== 'all' && card.dataset.group !== button.dataset.filter;
+            });
+        };
+    }
+
+    function renderProductsV2(target, items, groups, images, lang) {
+        if (!target || !Array.isArray(items) || !Array.isArray(groups)) return;
+        const groupByItem = {};
+        groups.forEach((group) => group.itemIds.forEach((id) => { groupByItem[id] = group; }));
+        const enquiryLabels = { ja: '\u3053\u306e\u5546\u54c1\u3092\u554f\u3044\u5408\u308f\u305b\u308b', zh: '\u54a8\u8be2\u6b64\u4ea7\u54c1', en: 'Enquire about this product' };
+        target.innerHTML = items.map((item, index) => {
+            const group = groupByItem[item.id] || {};
+            return `<article class="product-card" id="product-${escapeHTML(item.id)}" data-group="${escapeHTML(group.id || '')}" data-animate><div class="product-visual"><img src="${escapeHTML(images[item.id] || '')}" alt="${escapeHTML(item.title)}" width="640" height="440" loading="lazy" decoding="async"><span class="product-number">${String(index + 1).padStart(2, '0')}</span></div><div class="product-card-content"><span class="category-pill">${escapeHTML(group.title || item.category)}</span><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p><a class="product-enquiry" href="contact.html">${escapeHTML(enquiryLabels[lang] || enquiryLabels.ja)} <span aria-hidden="true">\u2197</span></a></div></article>`;
+        }).join('');
+    }
+
+    function renderFacilityDetailsV2(target, items, images, lang) {
+        if (!target || !Array.isArray(items)) return;
+        const ctaLabels = { ja: '\u8a2d\u5099\u306b\u3064\u3044\u3066\u554f\u3044\u5408\u308f\u305b\u308b', zh: '\u54a8\u8be2\u8bbe\u5907\u4fe1\u606f', en: 'Enquire about our facilities' };
+        target.innerHTML = items.map((item, index) => {
+            const details = Array.isArray(item.details) ? item.details : [];
+            const detail = details[0] || {};
+            const points = Array.isArray(detail.items) ? detail.items : [];
+            const pointList = points.map((point) => `<li>${escapeHTML(point)}</li>`).join('');
+            const image = images[detail.imageId || item.id] || '';
+            const number = String(index + 1).padStart(2, '0');
+            return `<article class="facility-detail" id="facility-detail-${index + 1}" data-animate><figure class="facility-detail-visual"><img src="${escapeHTML(image)}" alt="${escapeHTML(item.title)}" width="720" height="520" loading="lazy" decoding="async"><figcaption><span>${number}</span>${escapeHTML(item.stat || 'FACILITY')}</figcaption></figure><div class="facility-detail-body"><header class="facility-detail-header"><p class="section-kicker">${escapeHTML(item.stat || number)}</p><span class="facility-detail-number" aria-hidden="true">${number}</span><h3>${escapeHTML(item.title)}</h3></header><p class="facility-detail-summary">${escapeHTML(item.text)}</p><p class="facility-detail-description">${escapeHTML(detail.text || item.text)}</p>${pointList ? `<div class="facility-detail-points"><h4>CHECK POINT</h4><ul class="detail-list">${pointList}</ul></div>` : ''}<a class="facility-detail-link" href="contact.html">${escapeHTML(ctaLabels[lang] || ctaLabels.ja)} <span aria-hidden="true">\u2192</span></a></div></article>`;
+        }).join('');
+    }
+
     function renderDynamic(data, site) {
         const media = site.media;
         renderNews(document.querySelector('[data-render="homeNews"]'), data.home && data.home.news);
@@ -123,10 +172,12 @@
         renderFeatureCards(document.querySelector('[data-render="homeServices"]'), data.home && data.home.services, data.common && data.common.viewMore);
         renderRows(document.querySelector('[data-render="companyOutline"]'), data.company && data.company.outline);
         renderFeatureCards(document.querySelector('[data-render="companyPhilosophy"]'), data.company && data.company.philosophy, data.common && data.common.viewMore);
-        renderProductToc(document.querySelector('[data-render="productToc"]'), data.products && data.products.groups);
-        renderProducts(document.querySelector('[data-render="products"]'), data.products && data.products.items, data.products && data.products.groups, media.products);
+        renderProductFiltersV2(document.querySelector('[data-render="productFilters"]'), data.products && data.products.groups, document.documentElement.lang);
+        renderProductsV2(document.querySelector('[data-render="products"]'), data.products && data.products.items, data.products && data.products.groups, media.products, document.documentElement.lang);
+        const productNote = document.querySelector('[data-render="productNote"]');
+        if (productNote) productNote.textContent = ({ ja: '\u203b\u5199\u771f\u306f\u53d6\u6271\u5546\u54c1\u306e\u30a4\u30e1\u30fc\u30b8\u3067\u3059\u3002\u8a73\u7d30\u306f\u304a\u554f\u3044\u5408\u308f\u305b\u304f\u3060\u3055\u3044\u3002', zh: '\u203b\u56fe\u7247\u4e3a\u4ea7\u54c1\u793a\u610f\u56fe\uff0c\u8be6\u60c5\u8bf7\u54a8\u8be2\u3002', en: '* Images are illustrative. Please contact us for details.' })[document.documentElement.lang];
         renderCases(document.querySelector('[data-render="facilities"]'), data.facilities && data.facilities.cases, media.facilities);
-        renderFacilityDetails(document.querySelector('[data-render="facilityDetails"]'), data.facilities && data.facilities.cases, media.facilities);
+        renderFacilityDetailsV2(document.querySelector('[data-render="facilityDetails"]'), data.facilities && data.facilities.cases, media.facilities, document.documentElement.lang);
         renderRows(document.querySelector('[data-render="contactRows"]'), data.contact && data.contact.contactRows);
         renderRows(document.querySelector('[data-render="bankRows"]'), data.contact && data.contact.bankRows);
     }
