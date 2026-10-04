@@ -64,9 +64,9 @@
       "en": "Related Pages"
     },
     "ctaTitle": {
-      "ja": "事業内容・取扱品目について",
-      "zh": "关于业务内容与经营品类",
-      "en": "Business and Product Information"
+      "ja": "金属スクラップの買取・取扱品目について",
+      "zh": "关于金属废料收购与经营品类",
+      "en": "Metal Scrap Purchasing and Accepted Materials"
     },
     "ctaText": {
       "ja": "掲載情報をご確認のうえ、必要に応じて公開連絡先よりお問い合わせください。",
@@ -74,9 +74,9 @@
       "en": "Please review the public information and use the listed contact details when needed."
     },
     "ctaButton": {
-      "ja": "お問い合わせ情報へ",
-      "zh": "查看联系方式",
-      "en": "View Contact Information"
+      "ja": "買取・取扱品目を相談する",
+      "zh": "咨询收购与经营品类",
+      "en": "Discuss Materials and Purchasing"
     }
   },
   "home": {

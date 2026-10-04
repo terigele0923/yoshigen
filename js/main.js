@@ -12,9 +12,21 @@ window.addEventListener('yoshigen:i18n-ready', () => {
 });
 
 function initNavigation() {
+    const lang = document.documentElement.lang || 'ja';
+    const menuLabels = {
+        ja: { open: 'メニューを開く', close: 'メニューを閉じる' },
+        zh: { open: '打开菜单', close: '关闭菜单' },
+        en: { open: 'Open navigation', close: 'Close navigation' }
+    };
+    const menuLabel = menuLabels[lang] || menuLabels.ja;
     const header = document.querySelector('.site-header');
     const active = header && header.dataset.activePage;
-    document.querySelectorAll('.site-nav a').forEach((link) => link.classList.toggle('active', link.dataset.nav === active));
+    document.querySelectorAll('.site-nav a').forEach((link) => {
+        const isActive = link.dataset.nav === active;
+        link.classList.toggle('active', isActive);
+        if (isActive) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+    });
 
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.site-nav');
@@ -24,10 +36,13 @@ function initNavigation() {
         const open = nav.classList.toggle('is-open');
         langs.classList.toggle('is-open', open);
         toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? menuLabel.close : menuLabel.open);
     });
 }
 
 function initHeroSlider() {
+    const lang = document.documentElement.lang || 'ja';
+    const slideLabel = lang === 'zh' ? (index) => `显示第${index}张幻灯片` : lang === 'en' ? (index) => `Show slide ${index}` : (index) => `スライド${index}を表示`;
     const carousel = document.getElementById('lpCarousel');
     if (!carousel || carousel.dataset.ready) return;
     carousel.dataset.ready = 'true';
@@ -36,22 +51,35 @@ function initHeroSlider() {
     const interval = Number(carousel.dataset.interval || 5000);
     let current = 0;
     let timer = null;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (slides.length < 2) return;
     const hero = carousel.closest('.eco-hero');
     let paused = window.matchMedia('(hover: hover) and (pointer: fine)').matches && hero.matches(':hover');
 
+    function loadSlide(index) {
+        const slide = slides[(index + slides.length) % slides.length];
+        if (!slide || slide.style.backgroundImage || !slide.dataset.backgroundImage) return;
+        slide.style.backgroundImage = `url(${JSON.stringify(slide.dataset.backgroundImage)})`;
+    }
+
     function show(index) {
         current = (index + slides.length) % slides.length;
+        loadSlide(current);
         slides.forEach((slide, slideIndex) => {
             const active = slideIndex === current;
             slide.classList.toggle('active', active);
             slide.inert = !active;
+            slide.setAttribute('aria-hidden', String(!active));
         });
-        if (dots) dots.querySelectorAll('button').forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === current));
+        if (dots) dots.querySelectorAll('button').forEach((dot, dotIndex) => {
+            const active = dotIndex === current;
+            dot.classList.toggle('active', active);
+            dot.setAttribute('aria-current', active ? 'true' : 'false');
+        });
     }
     function start() {
         if (timer) window.clearInterval(timer);
-        if (paused) return;
+        if (paused || reduceMotion) return;
         timer = window.setInterval(() => {
             if (document.hidden) return;
             show(current + 1);
@@ -67,11 +95,21 @@ function initHeroSlider() {
         paused = false;
         start();
     });
+    hero.addEventListener('focusin', () => {
+        paused = true;
+        if (timer) window.clearInterval(timer);
+    });
+    hero.addEventListener('focusout', (event) => {
+        if (hero.contains(event.relatedTarget)) return;
+        paused = false;
+        start();
+    });
 
     if (dots) {
         slides.forEach((_, index) => {
             const dot = document.createElement('button');
             dot.type = 'button';
+            dot.setAttribute('aria-label', slideLabel(index + 1));
             dot.addEventListener('click', () => { show(index); start(); });
             dots.appendChild(dot);
         });
@@ -79,6 +117,9 @@ function initHeroSlider() {
     document.querySelector('[data-slide="prev"]')?.addEventListener('click', () => { show(current - 1); start(); });
     document.querySelector('[data-slide="next"]')?.addEventListener('click', () => { show(current + 1); start(); });
     show(current);
+    const preloadNext = () => loadSlide(current + 1);
+    if ('requestIdleCallback' in window) window.requestIdleCallback(preloadNext, { timeout: 2500 });
+    else window.setTimeout(preloadNext, 1500);
     start();
 }
 
@@ -112,6 +153,10 @@ function initReveal() {
 function initCounters() {
     const counters = Array.from(document.querySelectorAll('.counter-number:not([data-counter-ready])'));
     if (!counters.length) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        counters.forEach((counter) => { counter.textContent = String(Number(counter.dataset.count || 0)); });
+        return;
+    }
     const run = (counter) => {
         const target = Number(counter.dataset.count || 0);
         const start = performance.now();
@@ -138,6 +183,7 @@ function initCounters() {
 }
 
 function initTilts() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     document.querySelectorAll('.tilt-card:not([data-tilt-ready])').forEach((card) => {
         card.dataset.tiltReady = 'true';
         card.addEventListener('mousemove', (event) => {
@@ -153,6 +199,7 @@ function initTilts() {
 }
 
 function initCanvasMotion() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     document.querySelectorAll('canvas.motion-canvas, canvas.motion-canvas-small').forEach((canvas) => {
         if (canvas.dataset.motionReady) return;
         canvas.dataset.motionReady = 'true';

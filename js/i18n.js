@@ -2,6 +2,11 @@
 (function () {
     const LANGS = ['ja', 'zh', 'en'];
     const labels = { ja: '日本語', zh: '中文', en: 'English' };
+    const interfaceLabels = {
+        ja: { nav: 'メインナビゲーション', language: '表示言語', menu: 'メニューを開く', slides: 'スライドを選択', previous: '前のスライド', next: '次のスライド' },
+        zh: { nav: '主导航', language: '显示语言', menu: '打开菜单', slides: '选择幻灯片', previous: '上一张幻灯片', next: '下一张幻灯片' },
+        en: { nav: 'Main navigation', language: 'Language', menu: 'Open navigation', slides: 'Choose a slide', previous: 'Previous slide', next: 'Next slide' }
+    };
     let dictionary = null;
     let siteConfig = null;
 
@@ -75,7 +80,7 @@
     }
 
     function renderProductCard(item, images) {
-        return `<article class="product-card tilt-card" data-animate><div class="product-visual" style="background-image:url('${escapeHTML(images[item.id] || '')}')"></div><div class="product-card-content"><span class="category-pill">${escapeHTML(item.category)}</span><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></article>`;
+        return `<article class="product-card tilt-card" data-animate><img class="product-visual" src="${escapeHTML(images[item.id] || '')}" alt="${escapeHTML(item.title)}" width="640" height="380" loading="lazy" decoding="async"><div class="product-card-content"><span class="category-pill">${escapeHTML(item.category)}</span><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p></div></article>`;
     }
 
     function renderProducts(target, items, groups, images) {
@@ -150,7 +155,8 @@
             const slides = config.hero.slides.map((image, index) => {
                 const slide = template.cloneNode(true);
                 slide.classList.toggle('active', index === 0);
-                slide.style.backgroundImage = `url(${JSON.stringify(image)})`;
+                slide.dataset.backgroundImage = image;
+                if (index === 0) slide.style.backgroundImage = `url(${JSON.stringify(image)})`;
                 return slide;
             });
             track.replaceChildren(...slides);
@@ -172,6 +178,17 @@
         }
         const data = localize(all, selectedLang);
         document.documentElement.lang = selectedLang;
+        const ui = interfaceLabels[selectedLang];
+        document.querySelector('.site-nav')?.setAttribute('aria-label', ui.nav);
+        document.querySelector('.lang-switch')?.setAttribute('aria-label', ui.language);
+        document.querySelector('.menu-toggle')?.setAttribute('aria-label', ui.menu);
+        document.querySelector('.slider-dots')?.setAttribute('aria-label', ui.slides);
+        document.querySelector('[data-slide="prev"]')?.setAttribute('aria-label', ui.previous);
+        document.querySelector('[data-slide="next"]')?.setAttribute('aria-label', ui.next);
+        document.querySelectorAll('.slider-dots button').forEach((button, index) => {
+            const label = selectedLang === 'zh' ? `显示第${index + 1}张幻灯片` : selectedLang === 'en' ? `Show slide ${index + 1}` : `スライド${index + 1}を表示`;
+            button.setAttribute('aria-label', label);
+        });
         window.localStorage.setItem('yoshigen-lang', selectedLang);
         document.querySelectorAll('[data-i18n]').forEach((node) => {
             const value = getValue(data, node.dataset.i18n);
@@ -185,6 +202,7 @@
         document.querySelectorAll('.lang-switch button').forEach((button) => {
             button.textContent = labels[button.dataset.lang] || button.dataset.lang;
             button.classList.toggle('active', button.dataset.lang === selectedLang);
+            button.setAttribute('aria-pressed', String(button.dataset.lang === selectedLang));
         });
         renderDynamic(data, site);
         window.dispatchEvent(new CustomEvent('yoshigen:i18n-ready'));
