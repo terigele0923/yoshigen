@@ -145,7 +145,8 @@
         const groupByItem = {};
         groups.forEach((group) => group.itemIds.forEach((id) => { groupByItem[id] = group; }));
         const enquiryLabels = { ja: '\u3053\u306e\u5546\u54c1\u3092\u554f\u3044\u5408\u308f\u305b\u308b', zh: '\u54a8\u8be2\u6b64\u4ea7\u54c1', en: 'Enquire about this product' };
-        target.innerHTML = items.map((item, index) => {
+        const visibleItems = items.filter((item) => groupByItem[item.id]);
+        target.innerHTML = visibleItems.map((item, index) => {
             const group = groupByItem[item.id] || {};
             return `<article class="product-card" id="product-${escapeHTML(item.id)}" data-group="${escapeHTML(group.id || '')}" data-animate><div class="product-visual"><img src="${escapeHTML(images[item.id] || '')}" alt="${escapeHTML(item.title)}" width="640" height="440" loading="lazy" decoding="async"><span class="product-number">${String(index + 1).padStart(2, '0')}</span></div><div class="product-card-content"><span class="category-pill">${escapeHTML(group.title || item.category)}</span><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.text)}</p><a class="product-enquiry" href="contact.html">${escapeHTML(enquiryLabels[lang] || enquiryLabels.ja)} <span aria-hidden="true">\u2197</span></a></div></article>`;
         }).join('');
@@ -157,11 +158,12 @@
         target.innerHTML = items.map((item, index) => {
             const details = Array.isArray(item.details) ? item.details : [];
             const detail = details[0] || {};
-            const points = Array.isArray(detail.items) ? detail.items : [];
+            const points = lang === 'ja' ? [] : (Array.isArray(detail.items) ? detail.items : []);
             const pointList = points.map((point) => `<li>${escapeHTML(point)}</li>`).join('');
             const image = images[detail.imageId || item.id] || '';
             const number = String(index + 1).padStart(2, '0');
-            return `<article class="facility-detail" id="facility-detail-${index + 1}" data-animate><figure class="facility-detail-visual"><img src="${escapeHTML(image)}" alt="${escapeHTML(item.title)}" width="720" height="520" loading="lazy" decoding="async"><figcaption><span>${number}</span>${escapeHTML(item.stat || 'FACILITY')}</figcaption></figure><div class="facility-detail-body"><header class="facility-detail-header"><p class="section-kicker">${escapeHTML(item.stat || number)}</p><span class="facility-detail-number" aria-hidden="true">${number}</span><h3>${escapeHTML(item.title)}</h3></header><p class="facility-detail-summary">${escapeHTML(item.text)}</p><p class="facility-detail-description">${escapeHTML(detail.text || item.text)}</p>${pointList ? `<div class="facility-detail-points"><h4>CHECK POINT</h4><ul class="detail-list">${pointList}</ul></div>` : ''}<a class="facility-detail-link" href="contact.html">${escapeHTML(ctaLabels[lang] || ctaLabels.ja)} <span aria-hidden="true">\u2192</span></a></div></article>`;
+            const description = detail.text && detail.text !== item.text ? `<p class="facility-detail-description">${escapeHTML(detail.text)}</p>` : '';
+            return `<article class="facility-detail" id="facility-detail-${index + 1}" data-animate><figure class="facility-detail-visual"><img src="${escapeHTML(image)}" alt="${escapeHTML(item.title)}" width="720" height="520" loading="lazy" decoding="async"><figcaption><span>${number}</span>${escapeHTML(item.stat || 'FACILITY')}</figcaption></figure><div class="facility-detail-body"><header class="facility-detail-header"><p class="section-kicker">${escapeHTML(item.stat || number)}</p><span class="facility-detail-number" aria-hidden="true">${number}</span><h3>${escapeHTML(item.title)}</h3></header><p class="facility-detail-summary">${escapeHTML(item.text)}</p>${description}${pointList ? `<div class="facility-detail-points"><h4>CHECK POINT</h4><ul class="detail-list">${pointList}</ul></div>` : ''}<a class="facility-detail-link" href="contact.html">${escapeHTML(ctaLabels[lang] || ctaLabels.ja)} <span aria-hidden="true">\u2192</span></a></div></article>`;
         }).join('');
     }
 
@@ -170,6 +172,7 @@
         renderNews(document.querySelector('[data-render="homeNews"]'), data.home && data.home.news);
         document.querySelectorAll('[data-render="heroServices"]').forEach((target) => renderHeroServices(target, data.home && data.home.services));
         renderFeatureCards(document.querySelector('[data-render="homeServices"]'), data.home && data.home.services, data.common && data.common.viewMore);
+        renderFeatureCards(document.querySelector('[data-render="homeAbout"]'), data.home && data.home.about, data.common && data.common.viewMore);
         renderRows(document.querySelector('[data-render="companyOutline"]'), data.company && data.company.outline);
         renderFeatureCards(document.querySelector('[data-render="companyPhilosophy"]'), data.company && data.company.philosophy, data.common && data.common.viewMore);
         renderProductFiltersV2(document.querySelector('[data-render="productFilters"]'), data.products && data.products.groups, document.documentElement.lang);
@@ -216,8 +219,10 @@
         document.querySelectorAll('.page-hero-bg').forEach((hero) => {
             hero.style.backgroundImage = `url(${JSON.stringify(config.pageHeroImage)})`;
         });
-        const map = document.querySelector('.map-frame iframe');
-        if (map) map.src = `https://www.google.com/maps?q=${encodeURIComponent(config.contact.mapQuery)}&output=embed`;
+        document.querySelectorAll('.map-frame iframe').forEach((map) => {
+            const query = (config.contact.mapQueries && config.contact.mapQueries[map.dataset.mapKey]) || config.contact.mapQuery;
+            if (query) map.src = `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
+        });
     }
 
     async function applyLanguage(lang) {

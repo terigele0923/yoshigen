@@ -2071,3 +2071,13 @@ p {
         display: none;
     }
 }
+
+.hero-copy h1,
+.message-panel .body-text {
+    white-space: pre-line;
+}
+
+.contact-map-section .container {
+    display: grid;
+    gap: 28px;
+}

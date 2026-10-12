@@ -10,15 +10,9 @@
   "pageHeroImage": "images/background-image.png",
   "media": {
     "products": {
-      "steel": "images/background-image.png",
       "copper": "images/background-image02.png",
       "aluminum": "images/background-images03.png",
-      "stainless": "images/background-image.png",
-      "brass": "images/background-image02.png",
-      "wire": "images/background-images03.png",
-      "motor": "images/background-image.png",
-      "machinery": "images/background-image02.png",
-      "demolition-metal": "images/background-images03.png"
+      "machinery": "images/background-image02.png"
     },
     "facilities": {
       "yard": "images/background-image.png",
@@ -27,6 +21,10 @@
     }
   },
   "contact": {
-    "mapQuery": "千葉県佐倉市坂戸1371-1"
+    "mapQuery": "東京都千代田区丸の内3-2-2 丸の内二重橋ビル",
+    "mapQueries": {
+      "headOffice": "東京都千代田区丸の内3-2-2 丸の内二重橋ビル",
+      "chibaOffice": "千葉県佐倉市坂戸1371-1"
+    }
   }
 }
