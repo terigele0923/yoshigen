@@ -201,26 +201,6 @@
     line-height: 1.85;
 }
 
-.facility-detail-points {
-    margin-top: 24px;
-    padding: 20px;
-    border-left: 3px solid var(--green-600);
-    background: rgba(222, 244, 231, .7);
-}
-
-.facility-detail-points h4 {
-    margin: 0;
-    color: var(--green-600);
-    font-size: .72rem;
-    letter-spacing: .14em;
-}
-
-.facility-detail-points .detail-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px 20px;
-    margin-top: 14px;
-}
-
 .facility-detail-link {
     display: inline-flex;
     align-items: center;
@@ -247,10 +227,6 @@
 @media (max-width: 560px) {
     .product-filters button {
         flex: 1 1 calc(50% - 10px);
-    }
-
-    .facility-detail-points .detail-list {
-        grid-template-columns: 1fr;
     }
 
     .facility-detail-header {

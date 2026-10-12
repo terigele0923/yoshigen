@@ -158,12 +158,10 @@
         target.innerHTML = items.map((item, index) => {
             const details = Array.isArray(item.details) ? item.details : [];
             const detail = details[0] || {};
-            const points = lang === 'ja' ? [] : (Array.isArray(detail.items) ? detail.items : []);
-            const pointList = points.map((point) => `<li>${escapeHTML(point)}</li>`).join('');
             const image = images[detail.imageId || item.id] || '';
             const number = String(index + 1).padStart(2, '0');
             const description = detail.text && detail.text !== item.text ? `<p class="facility-detail-description">${escapeHTML(detail.text)}</p>` : '';
-            return `<article class="facility-detail" id="facility-detail-${index + 1}" data-animate><figure class="facility-detail-visual"><img src="${escapeHTML(image)}" alt="${escapeHTML(item.title)}" width="720" height="520" loading="lazy" decoding="async"><figcaption><span>${number}</span>${escapeHTML(item.stat || 'FACILITY')}</figcaption></figure><div class="facility-detail-body"><header class="facility-detail-header"><p class="section-kicker">${escapeHTML(item.stat || number)}</p><span class="facility-detail-number" aria-hidden="true">${number}</span><h3>${escapeHTML(item.title)}</h3></header><p class="facility-detail-summary">${escapeHTML(item.text)}</p>${description}${pointList ? `<div class="facility-detail-points"><h4>CHECK POINT</h4><ul class="detail-list">${pointList}</ul></div>` : ''}<a class="facility-detail-link" href="contact.html">${escapeHTML(ctaLabels[lang] || ctaLabels.ja)} <span aria-hidden="true">\u2192</span></a></div></article>`;
+            return `<article class="facility-detail" id="facility-detail-${index + 1}" data-animate><figure class="facility-detail-visual"><img src="${escapeHTML(image)}" alt="${escapeHTML(item.title)}" width="720" height="520" loading="lazy" decoding="async"><figcaption><span>${number}</span>${escapeHTML(item.stat || 'FACILITY')}</figcaption></figure><div class="facility-detail-body"><header class="facility-detail-header"><p class="section-kicker">${escapeHTML(item.stat || number)}</p><span class="facility-detail-number" aria-hidden="true">${number}</span><h3>${escapeHTML(item.title)}</h3></header><p class="facility-detail-summary">${escapeHTML(item.text)}</p>${description}<a class="facility-detail-link" href="contact.html">${escapeHTML(ctaLabels[lang] || ctaLabels.ja)} <span aria-hidden="true">\u2192</span></a></div></article>`;
         }).join('');
     }
 
