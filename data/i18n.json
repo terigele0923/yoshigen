@@ -854,11 +854,19 @@
       },
       {
         "label": {
-          "ja": "電話番号",
-          "zh": "电话",
-          "en": "Phone"
+          "ja": "本社電話番号",
+          "zh": "总部电话号码",
+          "en": "Head Office Phone"
         },
-        "value": "０４－０００－０００"
+        "value": "03-6837-4537"
+      },
+      {
+        "label": {
+          "ja": "千葉支店電話番号",
+          "zh": "千叶营业所电话号码",
+          "en": "Chiba Branch Phone"
+        },
+        "value": "043-497-2169"
       },
       {
         "label": {
@@ -866,7 +874,7 @@
           "zh": "邮箱",
           "en": "Email"
         },
-        "value": "AAAAAAAAAAAAAAAA@BBBBBBBBBBBBBBBBBBBB"
+        "value": "yoshigenshyoji@gmail.com"
       },
       {
         "label": {
@@ -901,9 +909,9 @@
           "en": "Bank"
         },
         "value": {
-          "ja": "〇〇銀行",
-          "zh": "〇〇银行",
-          "en": "Sample Bank"
+          "ja": "千葉銀行",
+          "zh": "千叶银行",
+          "en": "Chiba Bank"
         }
       },
       {
